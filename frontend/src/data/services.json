@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Quick Break",
+        "id": "quick-break",
+        "description": "" 
+    },
+    {
+        "name": "Therapeutic Massage",
+        "id": "therapeutic-massage",
+        "description": ""
+    },
+    {
+        "name": "Couples Treatment",
+        "id": "couples-treatment",
+        "description": ""
+    },
+    {
+        "name": "Skin Care",
+        "id": "skin-care",
+        "description": ""
+    }
+]

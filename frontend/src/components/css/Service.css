@@ -1,0 +1,19 @@
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    h3 {
+        font-size: 25px;
+    }
+
+    p {
+        width: 90%;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+}

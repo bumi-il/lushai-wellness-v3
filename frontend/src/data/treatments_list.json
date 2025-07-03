@@ -1,0 +1,207 @@
+[
+    {
+        "category": "Quick Break",
+        "name": "Relaxation back massage",
+        "duration": "30 minutes",
+        "price": 1800,
+        "type": "base"
+    },
+    {
+        "category": "Quick Break",
+        "name": "Indian head massage",
+        "duration": "30 minutes",
+        "price": 1800,
+        "type": "base"
+    },
+    {
+        "category": "Quick Break",
+        "name": "Foot Reflexology",
+        "duration": "30 minutes",
+        "price": 1800,
+        "type": "base"
+    },
+
+    {
+        "category": "Therapeutic Massage",
+        "name": "Aroma therapy",
+        "duration": "60 minutes",
+        "price": 2500,
+        "type": "base"
+    },
+    {
+        "category": "Therapeutic Massage",
+        "name": "Aroma therapy",
+        "duration": "90 minutes",
+        "price": 3500,
+        "type": "base"
+    },
+    {
+        "category": "Therapeutic Massage",
+        "name": "Swedish treatment",
+        "duration": "60 minutes",
+        "price": 3300,
+        "type": "base"
+    },
+    {
+        "category": "Therapeutic Massage",
+        "name": "Swedish treatment",
+        "duration": "90 minutes",
+        "price": 4300,
+        "type": "base"
+    },
+    {
+        "category": "Therapeutic Massage",
+        "name": "Deep tissue treatment",
+        "duration": "60 minutes",
+        "price": 3800,
+        "type": "base"
+    },
+    {
+        "category": "Therapeutic Massage",
+        "name": "Deep tissue treatment",
+        "duration": "90 minutes",
+        "price": 4800,
+        "type": "base"
+    },
+    {
+        "category": "Therapeutic Massage",
+        "name": "Indian abhyanga",
+        "duration": "60 minutes",
+        "price": 3300,
+        "type": "base"
+    },
+    {
+        "category": "Therapeutic Massage",
+        "name": "Indian abhyanga",
+        "duration": "90 minutes",
+        "price": 4300,
+        "type": "base"
+    },
+    {
+        "category": "Therapeutic Massage",
+        "name": "Balinese treatment",
+        "duration": "60 minutes",
+        "price": 3000,
+        "type": "base"
+    },
+    {
+        "category": "Therapeutic Massage",
+        "name": "Balinese treatment",
+        "duration": "90 minutes",
+        "price": 4000,
+        "type": "base"
+    },
+
+    {
+        "category": "Couples Treatment",
+        "name": "Couples massage",
+        "duration": "60 minutes",
+        "price": 6500,
+        "type": "base",
+        "note": "Any kind of massage"
+    },
+    {
+        "category": "Couples Treatment",
+        "name": "Couples massage",
+        "duration": "90 minutes",
+        "price": 8500,
+        "type": "base",
+        "note": "Any kind of massage"
+    },
+
+    {
+        "category": "Skin Care",
+        "name": "Exfoliating scrub",
+        "duration": "40 minutes",
+        "price": 2500,
+        "type": "base"
+    },
+    {
+        "category": "Skin Care",
+        "name": "Body wrap",
+        "duration": "40 minutes",
+        "price": 1800,
+        "type": "base"
+    },
+    {
+        "category": "Skin Care",
+        "name": "Exfoliating scrub + Body wrap",
+        "duration": "40 minutes",
+        "price": 3000,
+        "type": "base"
+    },
+    {
+        "category": "Skin Care",
+        "name": "Nails cleansing",
+        "duration": "40 minutes",
+        "price": 500,
+        "type": "add-on"
+    },
+
+    {
+        "category": "Skin Care",
+        "name": "Anti-aging Facial",
+        "duration": "60 minutes",
+        "price": 3000,
+        "type": "base"
+    },
+    {
+        "category": "Skin Care",
+        "name": "Acne facial",
+        "duration": "60 minutes",
+        "price": 2500,
+        "type": "base"
+    },
+    {
+        "category": "Skin Care",
+        "name": "Detoxifying facial",
+        "duration": "60 minutes",
+        "price": 2500,
+        "type": "base"
+    },
+    {
+        "category": "Skin Care",
+        "name": "Eye mask or eye cream",
+        "duration": "20 minutes",
+        "price": 500,
+        "type": "add-on"
+    },
+    {
+        "category": "Skin Care",
+        "name": "Neck and shoulder massage",
+        "duration": "20 minutes",
+        "price": 500,
+        "type": "add-on"
+    },
+    {
+        "category": "Skin Care",
+        "name": "Head massage",
+        "duration": "20 minutes",
+        "price": 500,
+        "type": "add-on"
+    },
+
+    {
+        "category": "Packages",
+        "name": "Swedish/Deep tissue + Exfoliating/Wrap",
+        "duration": "120 minutes",
+        "price": 6500,
+        "type": "package",
+        "note": "60min massage + 30min exfoliating/wrap"
+    },
+    {
+        "category": "Packages",
+        "name": "Aroma/Balinese + Facial",
+        "duration": "120 minutes",
+        "price": 4000,
+        "type": "package",
+        "note": "60min massage + 60min facial"
+    },
+    {
+        "category": "Packages",
+        "name": "Eye cream or eye mask (add-on in package)",
+        "duration": null,
+        "price": 300,
+        "type": "add-on"
+    }
+]

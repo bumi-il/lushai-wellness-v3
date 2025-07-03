@@ -1,0 +1,31 @@
+:root {
+    --primary-background-color: rgb(240, 230, 220);
+    --secondary-background-color: rgb(100, 100, 100);
+    --primary-text-color: rgb(0, 80, 0);
+    --secondary-text-color: rgb(240, 230, 220);
+    --header-height: 80px;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
+    font-family: sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, li, ul {
+    margin: 0;
+}
+
+/* #root {
+
+}
+
+* {
+    
+} */

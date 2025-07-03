@@ -1,0 +1,13 @@
+.hero {
+    height: 400px;
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    text-align: center;
+}
+
+.mobile {
+    height: 300px;
+}

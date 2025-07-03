@@ -1,0 +1,134 @@
+{
+    "treatments": {
+        "short_massages": [
+            {
+                "title": "Relaxation Back Massage",
+                "duration": "30min",
+                "price": 1800,
+                "description": "",
+                "icon": "",
+                "image": ""
+            },
+            {
+                "title": "Indian Head Massage",
+                "duration": "30min",
+                "price": 1800
+            },
+            {
+                "title": "Foot Reflexology",
+                "duration": "30min",
+                "price": 1800
+            }
+        ],
+        "exfoliation_and_wrapping": [
+            {
+                "title": "Whitening Scrub",
+                "duration": "40min",
+                "price": 2500
+            },
+            {
+                "title": "Milk & Rose Wrap",
+                "duration": "40min",
+                "price": 1800
+            },
+            {
+                "title": "Whitening Scrub + Milk & Rose Wrap",
+                "duration": "40min",
+                "price": 3000
+            }
+        ],
+        "exfoliation_add_ons": [
+            {
+                "title": "Cleansing Nails",
+                "price": 500
+            }
+        ],
+        "full_body_massages": [
+            {
+                "title": "Aroma Therapy",
+                "duration": ["60min", "90min"],
+                "price": [2500, 3500]
+            },
+            {
+                "title": "Swedish Treatment",
+                "duration": ["60min", "90min"],
+                "price": [3300, 4300]
+            },
+            {
+                "title": "Deep Tissue Treatment",
+                "duration": ["60min", "90min"],
+                "price": [3800, 4800]
+            },
+            {
+                "title": "Indian Abhyanga",
+                "duration": ["60min", "90min"],
+                "price": [3300, 4300]
+            },
+            {
+                "title": "Balinese Treatment",
+                "duration": ["60min", "90min"],
+                "price": [3000, 4000]
+            }
+        ],
+        "skin_and_beauty": [
+            {
+                "title": "Anti-aging Facial",
+                "duration": "60min",
+                "price": 3000
+            },
+            {
+                "title": "Acne Facial",
+                "duration": "60min",
+                "price": 2500
+            },
+            {
+                "title": "Detoxifying Facial",
+                "duration": "60min",
+                "price": 2500
+            }
+        ],
+        "facial_add_ons": [
+            {
+                "title": "Eye Mask or Eye Cream",
+                "price": 500
+            },
+            {
+                "title": "Neck and Shoulder Massage",
+                "price": 800
+            },
+            {
+                "title": "Head Massage",
+                "price": 800
+            }
+        ],
+        "couple_rituals": [
+            {
+                "title": "Couple Spa Ritual (Any kind of massage)",
+                "duration": ["60min", "90min"],
+                "price": [6500, 8500]
+            }
+        ],
+        "packages": [
+            {
+                "title": "Swedish/Deep Tissue + Exfoliating + Body Wrap",
+                "details": [
+                    "Swedish or Deep Tissue (60min)",
+                    "Exfoliation (30min)",
+                    "Body Wrap (any scrub & wrap) (30min)"
+                ],
+                "duration": "120min",
+                "price": 6500
+            },
+            {
+                "title": "Aroma Therapy/Balinese + Facial + Eye Add-on",
+                "details": [
+                    "Aroma Therapy or Balinese (60min)",
+                    "Facial (any, 60min)",
+                    "Add-on: Eye Cream or Eye Mask"
+                ],
+                "duration": "120min",
+                "price": 4000
+            }
+        ]
+    }
+}
