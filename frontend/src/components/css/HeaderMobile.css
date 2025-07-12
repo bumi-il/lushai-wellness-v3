@@ -54,7 +54,7 @@
 
     .book-now {
         position: absolute;
-        bottom: 10%;
+        bottom: 20%;
         left: 50%;
         transform: translateX(-50%);
         padding: 10px 20px;
