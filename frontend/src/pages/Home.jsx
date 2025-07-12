@@ -78,7 +78,7 @@ const HomeHeroHeader = () => {
     );
 };
 
-const HomeHero = () => {
+const HomeHero = ({ show }) => {
     return (
         <div className='home-hero-container'>
             <div className='home-hero'>
@@ -94,9 +94,15 @@ const HomeHero = () => {
                     />
                 </video>
                 <div className='home-hero-overlay'>
-                    <div className='home-hero-overlay-content'>
-                        {/* <HomeHeroHeader /> */}
-                    </div>
+                    {show && (
+                        <div className='home-hero-overlay-content'>
+                            <div>
+                                <h1>LUSHAI WELLNESS</h1>
+                                <h2>Holistic Spa Experience In India</h2>
+                                <NavLink to='/booking'>Book Now</NavLink>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
         </div>
@@ -214,12 +220,12 @@ const Home = () => {
                 )
             )}
             <HomeHeroHeader />
-            <HomeHero />
+            <HomeHero show={show} />
             <div
                 className={
-                    !show
-                        ? 'home-hero-overlay-text'
-                        : 'home-hero-overlay-text-move'
+                    show
+                        ? 'home-hero-overlay-text-move'
+                        : 'home-hero-overlay-text'
                 }
                 style={{
                     color: `rgb(${r}, ${g}, ${b})`,
@@ -227,7 +233,7 @@ const Home = () => {
             >
                 <div>
                     <img
-                        src={LushaiLogoLight}
+                        src={LushaiLogoDark}
                         alt=''
                     />
                 </div>
@@ -235,11 +241,11 @@ const Home = () => {
                 <h2>Holistic Spa Experience In India</h2>
                 <NavLink to='/booking'>Book Now</NavLink>
                 <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Repellendus in vero perspiciatis iste, dolorem
-                    exercitationem ipsam laborum esse sequi delectus soluta
-                    nostrum, consequatur deleniti? Aut repellat perferendis
-                    culpa ratione accusantium!
+                    Escape into tranquility at the heart of nature. Lushai
+                    Wellness offers soul-soothing treatments, natural therapies,
+                    and a serene setting within a luxury resort in India. Let
+                    your body unwind, your mind quiet, and your spirit rise.
+                    This is more than a spa – it's a journey back to yourself
                 </p>
             </div>
             <main className='home-main'>

@@ -53,6 +53,36 @@
 .home-hero-overlay-content {
     position: relative;
     height: 100%;
+
+    div {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        text-align: center;
+
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 20px 40px;
+            background-color: rgba(218, 165, 32, 0.6);
+            color: white;
+            border-radius: 50px;
+            font-size: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            display: inline-block;
+        }
+    }
 }
 
 .home-hero-header {

@@ -16,9 +16,10 @@ const Context = ({ children }) => {
     const [scrollPosition, setScrollPosition] = useState();
 
     const location = useLocation();
+    
     useEffect(() => {
         setPath(location.pathname.split('/')[1]);
-    }, [location]);    
+    }, [location]);   
 
     useEffect(() => {
         const handleResize = () => {

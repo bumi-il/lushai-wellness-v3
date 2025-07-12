@@ -1,13 +1,33 @@
 .hero {
-    height: 400px;
-    background-color: azure;
+    height: 300px;
+    background-image: url('../../assets/images/conifers-1867371_1920.jpg');
+    background-size: cover;
+    /* background-position: center; */
+    color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    font-size: 25px;
+    flex-direction: column;
     text-align: center;
+    gap: 20px;
+    padding: 0 10%;
+
+    h1 {
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 25px;
+    }
 }
 
-.mobile {
-    height: 300px;
+@media (max-width: 1024px) {
+    .hero {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+    }
 }
