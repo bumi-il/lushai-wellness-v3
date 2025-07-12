@@ -57,11 +57,17 @@ const HomeHeroHeader = () => {
     return (
         <header className='home-hero-header'>
             <NavLink
+                to='/'
+                style={{ color: color }}
+            >
+                Home
+            </NavLink>
+            {/* <NavLink
                 to='/about'
                 style={{ color: color }}
             >
                 About
-            </NavLink>
+            </NavLink> */}
             <NavLink
                 to='/treatments'
                 style={{ color: color }}

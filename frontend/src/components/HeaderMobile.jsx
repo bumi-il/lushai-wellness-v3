@@ -46,7 +46,7 @@ const Menu = ({ setOpenMenu }) => {
         <div className='header-mobile-menu'>
             <div>
                 <NavLink to='/' onClick={handleClick}>Home</NavLink>
-                <NavLink to='/about' onClick={handleClick}>About</NavLink>
+                {/* <NavLink to='/about' onClick={handleClick}>About</NavLink> */}
                 <NavLink to='/treatments' onClick={handleClick}>Treatments</NavLink>
                 <NavLink to='/contact' onClick={handleClick}>Contact</NavLink>
             </div>

@@ -1,5 +1,4 @@
 .contact {
-
 }
 
 .contact-form-container {
@@ -55,6 +54,25 @@
     }
 }
 
+.contact-info-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+.contact-map {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 @media (max-width: 768px) {
     .contact-form-container {
         flex-direction: column;
@@ -74,5 +92,13 @@
         div {
             flex-direction: column;
         }
+    }
+
+    .contact-info-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        text-align: center;
     }
 }

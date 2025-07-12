@@ -1,7 +1,9 @@
 import './css/About.css';
 
 const OurStory = () => {
-    return <div className='about-our-story'>Our Story</div>;
+    return <div className='about-our-story'>
+        
+    </div>;
 };
 
 const Team = () => {

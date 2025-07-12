@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './css/Contact.css';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css';
 
 const Form = () => {
     const [form, setForm] = useState({
@@ -115,21 +117,49 @@ const Form = () => {
 };
 
 const Info = () => {
-    return <div className='contact-info'>
-        
-    </div>;
+    return (
+        <div className='contact-info'>
+            <h1>Contact Information</h1>
+            <p>
+                Lalhmingthanga Building, Zarkawt, Aizawl, Mizoram 796007, India
+            </p>
+            <p>Phone: +91 1234567890</p>
+            <p>Email: 0Np3l@example.com</p>
+        </div>
+    );
 };
 
 const Map = () => {
-    return <div className='contact-map'>Map</div>;
+    return (
+        <div className='contact-map'>
+            <MapContainer
+                center={[23.7271, 92.7197]}
+                zoom={16}
+                style={{ height: '400px', width: '100%' }}
+            >
+                <TileLayer
+                    url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+                    attribution='&copy; OpenStreetMap contributors'
+                />
+                <Marker position={[23.7271, 92.7197]}>
+                    <Popup>
+                        Lalhmingthanga Building, Zarkawt, Aizawl, Mizoram
+                        796007, India
+                    </Popup>
+                </Marker>
+            </MapContainer>
+        </div>
+    );
 };
 
 const Contact = () => {
     return (
         <div className='contact'>
             <Form />
-            <Info />
-            <Map />
+            <div className='contact-info-container'>
+                <Map />
+                <Info />
+            </div>
         </div>
     );
 };
