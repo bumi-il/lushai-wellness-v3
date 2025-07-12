@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 import LushaiLogoDark from '../assets/images/lushai-logo-dark.jpg';
 import LushaiLogoLight from '../assets/images/lushai-logo-light.jpg';
 import LushaiLogo from '../assets/Lushai-logo.png';
+import FooterMobile from '../components/FooterMobile';
 
 const specialArray = [
     'Certified, experienced therapists',
@@ -175,6 +176,13 @@ const Special = () => {
 
 const Home = () => {
     const { screenType, scrollPosition } = useLushaiContext();
+    const [show, setShow] = useState(false);
+
+    useEffect(() => {
+        if (scrollPosition > window.innerHeight) {
+            setShow(true);
+        }
+    }, [scrollPosition]);
 
     const start = 0;
     const end = window.innerHeight;
@@ -209,7 +217,7 @@ const Home = () => {
             <HomeHero />
             <div
                 className={
-                    scrollPosition < window.innerHeight
+                    !show
                         ? 'home-hero-overlay-text'
                         : 'home-hero-overlay-text-move'
                 }
@@ -241,7 +249,7 @@ const Home = () => {
                 <Services />
                 <Special />
             </main>
-            <Footer />
+            {screenType === 'mobile' ? <FooterMobile /> : <Footer />}
         </div>
     );
 };

@@ -5,6 +5,7 @@ import { Outlet } from 'react-router';
 import './Layout.css';
 import { useLushaiContext } from '../context/Context';
 import HeaderMobile from '../components/HeaderMobile';
+import FooterMobile from '../components/FooterMobile';
 
 const Layout = () => {
     const { screenType } = useLushaiContext();
@@ -16,7 +17,7 @@ const Layout = () => {
                 <Hero />
                 <Outlet />
             </main>
-            <Footer />
+            {screenType === 'mobile' ? <FooterMobile /> : <Footer />}
         </div>
     );
 };

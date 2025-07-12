@@ -3,7 +3,6 @@
     position: relative;
     z-index: 1;
     overflow: hidden;
-    /* color: var(--primary-text-color); */
 }
 
 .border {
@@ -43,18 +42,17 @@
         margin-bottom: 10px;
     }
 
-    ul {
-        padding-left: 15px; 
-
-        li {
-            margin-bottom: 10px;
-        }
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
     a {
         text-decoration: none;
         color: var(--primary-text-color);
         position: relative;
+        width: fit-content;
     }
 
     a::after {
@@ -71,21 +69,5 @@
 
     a:hover::after {
         width: 100%;
-    }
-}
-
-@media (max-width: 1024px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-info {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
     }
 }
