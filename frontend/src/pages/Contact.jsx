@@ -137,7 +137,7 @@ const Info = () => {
                     target='_blank'
                     rel='noopener noreferrer'
                 >
-                    Phone: +917038788903
+                    +91 7038788903
                 </a>
             </p>
             <p>
@@ -148,6 +148,9 @@ const Info = () => {
                 >
                     lushai.wellness@gmail.com
                 </a>
+            </p>
+            <p>
+                <a href=""></a>
             </p>
         </div>
     );
@@ -167,8 +170,10 @@ const Map = () => {
                 />
                 <Marker position={[15.550952, 73.766432]}>
                     <Popup>
-                        Lalhmingthanga Building, Zarkawt, Aizawl, Mizoram
-                        796007, India
+                        <p>
+                            SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji,
+                            Prabhu wada, Calangute, Goa 403516, India
+                        </p>
                     </Popup>
                 </Marker>
             </MapContainer>

@@ -17,3 +17,21 @@
         height: 100px;
     }
 }
+
+.service-mask-image-test {
+    width: 200px;
+    height: 200px;
+    background-image: url('../../assets//images/ai-generated-8692405_1920.jpg');
+    background-size: cover;
+    background-position: center;
+
+    mask-image: url('../../assets//images//blob-1692452_1920.png');
+    mask-size: cover;
+    mask-position: center;
+    mask-repeat: no-repeat;
+
+    -webkit-mask-image: url('../../assets//images//blob-1692452_1920.png');
+    -webkit-mask-size: cover;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+}

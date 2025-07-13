@@ -210,7 +210,7 @@ const Service = ({ service }) => {
 
     return (
         <div className='service'>
-            {svg}
+            <div className='service-mask-image-test'></div>
             <h3>{name}</h3>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.

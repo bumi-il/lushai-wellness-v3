@@ -20,7 +20,7 @@ const heroTexts = {
     contact: {
         header: 'Contact Us',
         description:
-            'Get in touch with us for any inquiries or to schedule an appointment.',
+            'Feel free to reach out to us with your questions or comments.',
     },
 };
 
