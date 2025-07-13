@@ -15,7 +15,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 
     div {
         display: flex;
@@ -24,7 +24,6 @@
         input {
             outline: none;
             flex: 1;
-            /* height: 50px; */
             padding: 10px;
             border: none;
             border-bottom: 1px solid rgb(0, 80, 0);
@@ -38,6 +37,7 @@
         outline: none;
         border-bottom: 1px solid rgb(0, 80, 0);
         background-color: whitesmoke;
+        padding: 10px;
     }
 
     button {
