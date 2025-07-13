@@ -1,25 +1,28 @@
 [
     {
-        "id": "quick-break",
-        "category": "Quick Break",
+        "id": "short-escape",
+        "category": "Short Escape",
+        "description": "Short on time, but in need of peace? These 30-minute rituals offer a quick yet powerful reset — calming the body, quieting the mind, and restoring inner balance.",
         "treatments": [
             {
-                "name": "Relaxation back massage",
+                "name": "Relaxation Back Massage",
+                "description": "A soothing massage focused on your back, easing tension and bringing calm to your core.",
                 "duration": "30 minutes",
                 "price": "1800",
                 "type": "base",
-                "description": "Relax and rejuvenate with our expertly trained therapists. Our relaxation massage is designed to ease muscle tension, improve circulation and promote overall well-being.",
                 "isPopular": true,
                 "benefits": []
             },
             {
-                "name": "Indian head massage",
+                "name": "Indian Head Massage",
+                "description": "A warm oil massage that soothes the scalp and temples, bringing clarity and ease.",
                 "duration": "30 minutes",
                 "price": "1800",
                 "type": "base"
             },
             {
-                "name": "Foot Reflexology",
+                "name": "Grounding Foot Reflexology",
+                "description": "A healing foot ritual that stimulates energy flow and restores balance through vital reflex zones.",
                 "duration": "30 minutes",
                 "price": "1800",
                 "type": "base"
@@ -27,164 +30,188 @@
         ]
     },
     {
-        "id": "therapeutic-massage",
-        "category": "Therapeutic Massage",
+        "id": "lushai-rituals",
+        "category": "Lushai Rituals",
+        "description": "At the heart of Lushai lies this collection of holistic experiences, shaped by culture, rhythm, and intention. Each ritual is designed to awaken the senses, release tension, and restore inner harmony through skilled touch and aromatic oils.",
         "treatments": [
             {
-                "name": "Aroma therapy",
+                "name": "Aromatic Relaxation",
                 "duration": "60 / 90 minutes",
                 "price": "2500 / 3500",
-                "isPopular": true,
                 "type": "base"
             },
             {
-                "name": "Swedish treatment",
-                "duration": "60 / 90 minutes",
-                "price": "3300 / 4300",
-                "type": "base"
-            },
-            {
-                "name": "Deep tissue treatment",
-                "duration": "60 / 90 minutes",
-                "price": "3800 / 4800",
-                "type": "base"
-            },
-            {
-                "name": "Indian abhyanga",
-                "duration": "60 / 90 minutes",
-                "price": "3300 / 4300",
-                "type": "base"
-            },
-            {
-                "name": "Balinese treatment",
+                "name": "Balinese Journey",
                 "duration": "60 / 90 minutes",
                 "price": "3000 / 4000",
                 "type": "base"
+            },
+            {
+                "name": "Indian Abhyanga",
+                "duration": "60 / 90 minutes",
+                "price": "3300 / 4300",
+                "isPopular": true,
+                "type": "base"
+            },
+            {
+                "name": "Swedish Flow",
+                "duration": "60 / 90 minutes",
+                "price": "3300 / 4300",
+                "type": "base"
+            },
+            {
+                "name": "Deep Tissue Therapy",
+                "duration": "60 / 90 minutes",
+                "price": "3800 / 4800",
+                "type": "base"
             }
         ]
     },
     {
-        "id": "couples-treatment",
-        "category": "Couples Treatment",
+        "id": "couples-experience",
+        "category": "Couples Experience",
         "treatments": [
             {
-                "name": "Couples massage",
+                "name": "Shared Embrace",
                 "duration": "60 minutes",
                 "price": "6500",
                 "type": "base",
-                "isPopular": true,
                 "note": "Any kind of massage"
             },
             {
-                "name": "Couples massage",
+                "name": "Deeper Connection",
                 "duration": "90 minutes",
                 "price": "8500",
                 "type": "base",
+                "isPopular": true,
                 "note": "Any kind of massage"
             }
         ]
     },
     {
-        "id": "skin-care",
-        "category": "Skin Care",
+        "id": "serene-skin",
+        "category": "Serene Skin",
         "treatments": [
+            {
+                "name": "Acne Facial",
+                "duration": "60 minutes",
+                "price": "2500",
+                "type": "base",
+                "part": "Face",
+                "category": "Facial"
+            },
+            {
+                "name": "Anti Aging Facial",
+                "duration": "60 minutes",
+                "price": "3000",
+                "type": "base",
+                "part": "Face",
+                "category": "Facial"
+            },
+            {
+                "name": "Body Wrap",
+                "duration": "40 minutes",
+                "price": "1800",
+                "type": "base",
+                "part": "Full Body",
+                "category": "Wrap"
+            },
             {
                 "name": "Exfoliating Scrub",
                 "duration": "40 minutes",
                 "price": "2500",
                 "type": "base",
-                "isPopular": true,
+                "part": "Full Body",
                 "category": "Scrub"
             },
             {
-                "name": "Body wrap",
-                "duration": "40 minutes",
-                "price": "1800",
-                "type": "base",
-                "category": "Scrub"
-            },
-            {
-                "name": "Exfoliating scrub + Body wrap",
+                "name": "Body Polish Ritual",
                 "duration": "40 minutes",
                 "price": "3000",
                 "type": "base",
-                "category": "Scrub"
-            },
-            {
-                "name": "Nails cleansing",
-                "duration": "40 minutes",
-                "price": "500",
-                "type": "add-on",
-                "category": "Scrub"
-            },
-            {
-                "name": "Anti-aging Facial",
-                "duration": "60 minutes",
-                "price": "3000",
-                "type": "base",
-                "category": "Facial"
-            },
-            {
-                "name": "Ance facial",
-                "duration": "60 minutes",
-                "price": "2500",
-                "type": "base",
-                "category": "Facial"
-            },
-            {
-                "name": "Detoxifying Facial",
-                "duration": "60 minutes",
-                "price": "2500",
-                "type": "base",
-                "category": "Facial"
-            },
-            {
-                "name": "Eye mask or eye cream",
-                "duration": "20 minutes",
-                "price": "500",
-                "type": "add-on",
-                "category": "Facial"
-            },
-            {
-                "name": "Neck and shoulder massage",
-                "duration": "20 minutes",
-                "price": "500",
-                "type": "add-on",
-                "category": "Facial"
-            },
-            {
-                "name": "Head massage",
-                "duration": "20 minutes",
-                "price": "500",
-                "type": "add-on",
-                "category": "Facial"
+                "part": "Full Body",
+                "category": "Scrub & Wrap",
+                "isPopular": true
             }
         ]
     },
     {
-        "id": "packages",
-        "category": "Packages",
+        "id": "beauty-touch",
+        "category": "Beauty Touch",
         "treatments": [
             {
-                "name": "Swedish/Deep tissue + Exfoliating/Wrap",
-                "duration": "120 minutes",
-                "price": "6500",
-                "type": "package",
-                "isPopular": true,
-                "note": "60min massage + 30min exfoliating/wrap"
+                "name": "Manicure",
+                "duration": "30 minutes",
+                "price": "1500",
+                "type": "base"
             },
             {
-                "name": "Aroma/Balinese + Facial",
+                "name": "Pedicure",
+                "duration": "30 minutes",
+                "price": "1500",
+                "type": "base"
+            },
+            {
+                "name": "Manicure & Pedicure",
+                "duration": "60 minutes",
+                "price": "3000",
+                "type": "base"
+            }
+        ]
+    },
+    {
+        "id": "lushai-packages",
+        "category": "Lushai Packages",
+        "treatments": [
+            {
+                "name": "Glow & Unwind",
                 "duration": "120 minutes",
                 "price": "4000",
                 "type": "package",
-                "note": "60min massage + 60min facial"
+                "note": "90 min massage + 30 min facial",
+                "isPopular": true
             },
             {
-                "name": "Eye cream or eye mask",
-                "duration": null,
-                "price": "300",
-                "type": "add-on"
+                "name": "Renew & Restore",
+                "duration": "120 minutes",
+                "price": "6500",
+                "type": "package",
+                "note": "90 min massage + 30 min skin care"
+            }
+        ]
+    },
+    {
+        "id": "finishing-touches",
+        "category": "Finishing Touches",
+        "treatments": [
+            {
+                "name": "Nails Cleansing",
+                "duration": "40 minutes",
+                "price": "500",
+                "type": "add-on",
+                "pair with": "any treatment"
+            },
+            {
+                "name": "Eye Mask / Eye Cream",
+                "duration": "20 minutes",
+                "price": "500",
+                "type": "add-on",
+                "pair with": "serene skin: only scrub and wrap",
+                "isPopular": true
+            },
+            {
+                "name": "Neck & Shoulder Massage",
+                "duration": "20 minutes",
+                "price": "500",
+                "type": "add-on",
+                "pair with": "facials"
+            },
+            {
+                "name": "Head Massage",
+                "duration": "20 minutes",
+                "price": "500",
+                "type": "add-on",
+                "pair with": "facials"
             }
         ]
     }

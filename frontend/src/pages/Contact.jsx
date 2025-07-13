@@ -3,6 +3,8 @@ import './css/Contact.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import '../utils/leafletIconFix';
+import { Mail, MapPin, Phone } from 'lucide-react';
+import { FaWhatsapp, FaPhone } from 'react-icons/fa';
 
 const Form = () => {
     const [form, setForm] = useState({
@@ -121,7 +123,8 @@ const Info = () => {
     return (
         <div className='contact-info'>
             <h1>Contact Information</h1>
-            <p>
+            <div>
+                <MapPin />
                 <a
                     href='https://maps.app.goo.gl/YgpDAzrJKpD92tg6A?g_st=aw'
                     target='_blank'
@@ -130,8 +133,9 @@ const Info = () => {
                     SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji, Prabhu
                     wada, Calangute, Goa 403516, India
                 </a>
-            </p>
-            <p>
+            </div>
+            <div>
+                <Phone />
                 <a
                     href='tel:+917038788903'
                     target='_blank'
@@ -139,8 +143,9 @@ const Info = () => {
                 >
                     +91 7038788903
                 </a>
-            </p>
-            <p>
+            </div>
+            <div>
+                <Mail />
                 <a
                     href='mailto:lushai.wellness@gmail.com'
                     target='_blank'
@@ -148,10 +153,13 @@ const Info = () => {
                 >
                     lushai.wellness@gmail.com
                 </a>
-            </p>
-            <p>
-                <a href=""></a>
-            </p>
+            </div>
+            <div>
+                <FaWhatsapp />
+                <a href="https://wa.me/917038788903">
+                    +91 7038788903
+                </a>
+            </div>
         </div>
     );
 };
