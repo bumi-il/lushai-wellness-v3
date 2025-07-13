@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './css/Contact.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import '../utils/leafletIconFix';
 
 const Form = () => {
     const [form, setForm] = useState({
