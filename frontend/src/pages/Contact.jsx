@@ -25,7 +25,7 @@ const Form = () => {
         e.preventDefault();
         console.log(form);
         setSubmitted(true);
-        fetch('https://hook.eu2.make.com/p3ui0klbmbtbfgqgjav54iulg0ip0tjy', {
+        fetch('https://hook.eu2.make.com/621j5jmsirf9uvp310cqqsqukmwqbn5h', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -122,10 +122,33 @@ const Info = () => {
         <div className='contact-info'>
             <h1>Contact Information</h1>
             <p>
-                Lalhmingthanga Building, Zarkawt, Aizawl, Mizoram 796007, India
+                <a
+                    href='https://maps.app.goo.gl/YgpDAzrJKpD92tg6A?g_st=aw'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji, Prabhu
+                    wada, Calangute, Goa 403516, India
+                </a>
             </p>
-            <p>Phone: +91 1234567890</p>
-            <p>Email: 0Np3l@example.com</p>
+            <p>
+                <a
+                    href='tel:+917038788903'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    Phone: +917038788903
+                </a>
+            </p>
+            <p>
+                <a
+                    href='mailto:lushai.wellness@gmail.com'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                >
+                    lushai.wellness@gmail.com
+                </a>
+            </p>
         </div>
     );
 };
@@ -134,7 +157,7 @@ const Map = () => {
     return (
         <div className='contact-map'>
             <MapContainer
-                center={[23.7271, 92.7197]}
+                center={[15.550952, 73.766432]}
                 zoom={16}
                 style={{ height: '400px', width: '100%' }}
             >
@@ -142,7 +165,7 @@ const Map = () => {
                     url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                     attribution='&copy; OpenStreetMap contributors'
                 />
-                <Marker position={[23.7271, 92.7197]}>
+                <Marker position={[15.550952, 73.766432]}>
                     <Popup>
                         Lalhmingthanga Building, Zarkawt, Aizawl, Mizoram
                         796007, India
