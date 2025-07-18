@@ -3,7 +3,7 @@ import './css/Contact.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import '../utils/leafletIconFix';
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, MapPin, Phone, Clock } from 'lucide-react';
 import { FaWhatsapp, FaPhone } from 'react-icons/fa';
 
 const Form = () => {
@@ -122,18 +122,6 @@ const Form = () => {
 const Info = () => {
     return (
         <div className='contact-info'>
-            <h1>Contact Information</h1>
-            <div>
-                <MapPin />
-                <a
-                    href='https://maps.app.goo.gl/YgpDAzrJKpD92tg6A?g_st=aw'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
-                    SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji, Prabhu
-                    wada, Calangute, Goa 403516, India
-                </a>
-            </div>
             <div>
                 <Phone />
                 <a
@@ -160,6 +148,19 @@ const Info = () => {
                     +91 7038788903
                 </a>
             </div>
+            <div>
+                <MapPin />
+                <p>
+                    SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji, Prabhu
+                    wada, Calangute, Goa 403516, India
+                </p>
+            </div>
+            <div>
+                <Clock />
+                <p>
+                    10:00 AM - 10:00 PM (Sunday to Saturday)
+                </p>
+            </div>
         </div>
     );
 };
@@ -177,7 +178,7 @@ const Map = () => {
                     attribution='&copy; OpenStreetMap contributors'
                 />
                 <Marker position={[15.550952, 73.766432]}>
-                    <Popup>
+                    <Popup maxWidth={200}>
                         <p>
                             SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji,
                             Prabhu wada, Calangute, Goa 403516, India

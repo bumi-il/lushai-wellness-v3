@@ -65,6 +65,10 @@
 .contact-map {
     border-radius: 20px;
     overflow: hidden;
+
+    p {
+        text-align: center;
+    }
 }
 
 .contact-info {
@@ -78,14 +82,15 @@
         gap: 10px;
 
         svg {
-            width: 20px;
-            height: 20px;
+            font-size: 20px;
+            flex-shrink: 0;
         }
 
         a {
             text-decoration: none;
             color: rgb(0, 80, 0);
-            text-align: left;
+            text-align: center;
+            flex-shrink: 1;
         }
 
         a:hover {
@@ -121,5 +126,10 @@
 
     .contact-info {
         text-align: center;
+
+        div {
+            justify-content: space-between;
+            text-align: left;
+        }
     }
 }
