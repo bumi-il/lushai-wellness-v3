@@ -3,8 +3,8 @@ import './css/Contact.css';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import '../utils/leafletIconFix';
-import { Mail, MapPin, Phone, Clock } from 'lucide-react';
-import { FaWhatsapp, FaPhone } from 'react-icons/fa';
+import { FaWhatsapp } from 'react-icons/fa';
+import { CiMail, CiLocationOn, CiClock1, CiPhone } from 'react-icons/ci';
 
 const Form = () => {
     const [form, setForm] = useState({
@@ -123,7 +123,7 @@ const Info = () => {
     return (
         <div className='contact-info'>
             <div>
-                <Phone />
+                <CiPhone />
                 <a
                     href='tel:+917038788903'
                     target='_blank'
@@ -133,7 +133,7 @@ const Info = () => {
                 </a>
             </div>
             <div>
-                <Mail />
+                <CiMail />
                 <a
                     href='mailto:lushai.wellness@gmail.com'
                     target='_blank'
@@ -143,22 +143,21 @@ const Info = () => {
                 </a>
             </div>
             <div>
-                <FaWhatsapp />
-                <a href="https://wa.me/917038788903">
-                    +91 7038788903
+                <FaWhatsapp size={22}/>
+                <a href='https://wa.me/917038788903'>+91 7038788903</a>
+            </div>
+            <div>
+                <CiLocationOn />
+                <a href='https://maps.app.goo.gl/bc1acaVKiYJumniM6' target='_blank'>
+                    SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji, Prabhu
+                    wada, Calangute, Goa 403516, India
                 </a>
             </div>
             <div>
-                <MapPin />
+                <CiClock1 />
                 <p>
-                    SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji, Prabhu
-                    wada, Calangute, Goa 403516, India
-                </p>
-            </div>
-            <div>
-                <Clock />
-                <p>
-                    10:00 AM - 10:00 PM (Sunday to Saturday)
+                    10:00 AM - 10:00 PM <br />
+                    (Sunday to Saturday)
                 </p>
             </div>
         </div>
