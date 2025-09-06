@@ -3,6 +3,10 @@
         "id": "short-escape",
         "category": "Short Escape",
         "description": "Short on time, but in need of peace? These 30-minute rituals offer a quick yet powerful reset — calming the body, quieting the mind, and restoring inner balance.",
+        "image": "",
+        "alt": "",
+        "icon": "",
+        "color": "red",
         "treatments": [
             {
                 "name": "Relaxation Back Massage",
@@ -33,21 +37,28 @@
         "id": "lushai-rituals",
         "category": "Lushai Rituals",
         "description": "At the heart of Lushai lies this collection of holistic experiences, shaped by culture, rhythm, and intention. Each ritual is designed to awaken the senses, release tension, and restore inner harmony through skilled touch and aromatic oils.",
+        "image": "",
+        "alt": "",
+        "icon": "",
+        "color": "yellow",
         "treatments": [
             {
                 "name": "Aromatic Relaxation",
+                "description": "Gentle, flowing strokes with essential oils to calm the senses and soften the body.",
                 "duration": "60 / 90 minutes",
                 "price": "2500 / 3500",
                 "type": "base"
             },
             {
                 "name": "Balinese Journey",
+                "description": "A traditional full-body massage combining acupressure, stretching, and deep strokes for energy renewal.",
                 "duration": "60 / 90 minutes",
                 "price": "3000 / 4000",
                 "type": "base"
             },
             {
                 "name": "Indian Abhyanga",
+                "description": "An Ayurvedic oil massage using warm herbal oils and rhythmic strokes to restore harmony and circulation.",
                 "duration": "60 / 90 minutes",
                 "price": "3300 / 4300",
                 "isPopular": true,
@@ -55,12 +66,14 @@
             },
             {
                 "name": "Swedish Flow",
+                "description": "Classic massage techniques to release tension and promote deep relaxation and overall wellness.",
                 "duration": "60 / 90 minutes",
                 "price": "3300 / 4300",
                 "type": "base"
             },
             {
                 "name": "Deep Tissue Therapy",
+                "description": "Focused work on deep muscle layers to relieve chronic tension and restore flexibility.",
                 "duration": "60 / 90 minutes",
                 "price": "3800 / 4800",
                 "type": "base"
@@ -70,9 +83,15 @@
     {
         "id": "couples-experience",
         "category": "Couples Experience",
+        "description": "A shared moment of stillness and warmth. Let Lushai be the backdrop for your intimate escape — where healing touch meets gentle connection, and time slows down for two.",
+        "image": "",
+        "alt": "",
+        "icon": "",
+        "color": "green",
         "treatments": [
             {
                 "name": "Shared Embrace",
+                "description": "Side by side in a serene setting, each of you enjoys a full-body massage tailored to your preference — whether calming or invigorating. A beautiful way to unwind together and reconnect through touch.",
                 "duration": "60 minutes",
                 "price": "6500",
                 "type": "base",
@@ -80,6 +99,7 @@
             },
             {
                 "name": "Deeper Connection",
+                "description": "Side by side in a serene setting, each of you enjoys a full-body massage tailored to your preference — whether calming or invigorating. A beautiful way to unwind together and reconnect through touch.",
                 "duration": "90 minutes",
                 "price": "8500",
                 "type": "base",
@@ -91,9 +111,15 @@
     {
         "id": "serene-skin",
         "category": "Serene Skin",
+        "description": "Nourish your skin, restore your glow. These treatments combine traditional techniques with natural ingredients to refresh, purify, and rejuvenate — from head to toe.",
+        "image": "",
+        "alt": "",
+        "icon": "",
+        "color": "brown",
         "treatments": [
             {
                 "name": "Acne Facial",
+                "description": "Targeted care to soothe inflammation, reduce breakouts, and promote clear skin.",
                 "duration": "60 minutes",
                 "price": "2500",
                 "type": "base",
@@ -102,6 +128,7 @@
             },
             {
                 "name": "Anti Aging Facial",
+                "description": "A revitalizing treatment that softens fine lines and restores elasticity for a youthful glow.",
                 "duration": "60 minutes",
                 "price": "3000",
                 "type": "base",
@@ -110,6 +137,7 @@
             },
             {
                 "name": "Body Wrap",
+                "description": "A warming cocoon of hydration and detox, leaving the skin soft, supple, and renewed.",
                 "duration": "40 minutes",
                 "price": "1800",
                 "type": "base",
@@ -118,6 +146,7 @@
             },
             {
                 "name": "Exfoliating Scrub",
+                "description": "Gently buffs away dullness, revealing radiant, smooth skin with a natural glow.",
                 "duration": "40 minutes",
                 "price": "2500",
                 "type": "base",
@@ -126,6 +155,7 @@
             },
             {
                 "name": "Body Polish Ritual",
+                "description": "A complete body renewal experience combining both exfoliation and deep nourishment.",
                 "duration": "40 minutes",
                 "price": "3000",
                 "type": "base",
@@ -138,21 +168,29 @@
     {
         "id": "beauty-touch",
         "category": "Beauty Touch",
+        "description": "Refined beauty care for everyday elegance. A selection of essential grooming rituals designed to keep you polished, refreshed, and ready — whether for a special occasion or just because you deserve it.",
+        "image": "",
+        "alt": "",
+        "icon": "",
+        "color": "gray",
         "treatments": [
             {
                 "name": "Manicure",
+                "description": "Nourish your hands with nail shaping, cuticle care, and a soft hand massage.",
                 "duration": "30 minutes",
                 "price": "1500",
                 "type": "base"
             },
             {
                 "name": "Pedicure",
+                "description": "Revive your feet with a soothing soak, gentle exfoliation, and relaxing massage.",
                 "duration": "30 minutes",
                 "price": "1500",
                 "type": "base"
             },
             {
                 "name": "Manicure & Pedicure",
+                "description": "Indulge in a complete care ritual for your hands and feet, leaving you polished and refreshed.",
                 "duration": "60 minutes",
                 "price": "3000",
                 "type": "base"
@@ -162,9 +200,15 @@
     {
         "id": "lushai-packages",
         "category": "Lushai Packages",
+        "description": "Thoughtfully designed combinations that bring together massage, skincare, and body treatments — perfect for those seeking a complete spa journey in one seamless session.",
+        "image": "",
+        "alt": "",
+        "icon": "",
+        "color": "pink",
         "treatments": [
             {
                 "name": "Glow & Unwind",
+                "description": "Let go of tension with a calming Aroma or Balinese massage, paired with a tailored facial that brings out your natural glow. A perfect head-to-toe ritual.",
                 "duration": "120 minutes",
                 "price": "4000",
                 "type": "package",
@@ -173,6 +217,7 @@
             },
             {
                 "name": "Renew & Restore",
+                "description": "Unwind deeply with your choice of Swedish or Deep Tissue massage, followed by an exfoliating scrub or nourishing wrap that leaves your skin renewed and your body completely restored.",
                 "duration": "120 minutes",
                 "price": "6500",
                 "type": "package",
@@ -183,9 +228,15 @@
     {
         "id": "finishing-touches",
         "category": "Finishing Touches",
+        "description": "Delicate enhancements designed to complement your main treatment. These gentle additions offer that final layer of care—whether it’s a soothing head massage or a nourishing eye cream.",
+        "image": "",
+        "alt": "",
+        "icon": "",
+        "color": "blue",
         "treatments": [
             {
                 "name": "Nails Cleansing",
+                "description": "Gentle care to clean and refresh your nails — perfect as a finishing touch.",
                 "duration": "40 minutes",
                 "price": "500",
                 "type": "add-on",
@@ -193,6 +244,7 @@
             },
             {
                 "name": "Eye Mask / Eye Cream",
+                "description": "A focused boost of hydration and brightness for tired or puffy eyes.",
                 "duration": "20 minutes",
                 "price": "500",
                 "type": "add-on",
@@ -201,6 +253,7 @@
             },
             {
                 "name": "Neck & Shoulder Massage",
+                "description": "Relieves tension from your upper body, enhancing the benefits of your main treatment.",
                 "duration": "20 minutes",
                 "price": "500",
                 "type": "add-on",
@@ -208,6 +261,7 @@
             },
             {
                 "name": "Head Massage",
+                "description": "A calming extension that eases stress and quiets the mind.",
                 "duration": "20 minutes",
                 "price": "500",
                 "type": "add-on",

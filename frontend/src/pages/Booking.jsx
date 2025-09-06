@@ -2,17 +2,7 @@ import { useState } from 'react';
 import './css/Booking.css';
 import { NavLink } from 'react-router-dom';
 
-const disclaimers = [
-    'Bookings are for general wellness and are not a replacement for medical care.',
-    'Inappropriate behavior will result in session cancellation and a ₹3000 penalty.',
-    'Therapists may refuse service for health-related reasons.',
-    'We are not responsible for personal belongings.',
-    'By continuing, you waive any claims against Lushai Wellness or its staff.',
-];
-
 const Booking = () => {
-    const [agreed, setAgreed] = useState(false);
-
     return (
         <div className='booking'>
             <div className='booking-container'>
@@ -34,34 +24,44 @@ const Booking = () => {
                         </p>
                     </div>
                 </div>
-                <div className='booking-disclaimer'>
-                    <h2>Booking Disclaimer</h2>
-                    <h4>Please read and agree before continuing:</h4>
-                    <div className='booking-disclaimer-list'>
-                        {disclaimers.map((disclaimer, index) => (
-                            <p key={index}>{disclaimer}</p>
-                        ))}
-                    </div>
-                    <div
-                        className='booking-disclaimer-agree'
-                        onClick={() => setAgreed(!agreed)}
-                    >
-                        <input
-                            type='checkbox'
-                            checked={agreed}
-                            onChange={() => setAgreed(!agreed)}
-                        ></input>
-                        <p>I have read and agree</p>
-                    </div>
-                </div>
-                <div className='booking-continue'>
+                <h2>Before You Arrive</h2>
+                <div className='before-arrive'>
+                    <p>
+                        In a world that moves fast, you’ve chosen to slow down —
+                        and that’s a powerful act of self-care. Your session is
+                        more than just a treatment. It’s a chance to breathe
+                        deeply, to feel, to reconnect — with your body, your
+                        mind, and your stillness.
+                    </p>
+                    <h4>To prepare</h4>
+                    <ul>
+                        <li>
+                            Arrive 10 minutes early to let the outside world
+                            fade
+                        </li>
+                        <li>
+                            Eat light, and drink water — your body will thank
+                            you
+                        </li>
+                        <li>
+                            Let your therapist know what you need, or what to
+                            avoid
+                        </li>
+                        <li>
+                            Most importantly: allow yourself to be fully present
+                        </li>
+                        <li>
+                            Let this be your reset. We’ll take care of
+                            everything else.
+                        </li>
+                    </ul>
                     <a
-                        href='https://www.welns.io/product/booking/WFRCHN469741/Lushaiwellness339361/'
+                        href='https://www.welns.io/product/booking/WFRCHN469741/Lushaiwellness339361'
                         target='_blank'
                         rel='noopener noreferrer'
-                        className={agreed ? '' : 'disabled'}
+                        className='continue-booking'
                     >
-                        Continue to booking
+                        Continue to Booking
                     </a>
                 </div>
             </div>

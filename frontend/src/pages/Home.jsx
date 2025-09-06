@@ -13,6 +13,7 @@ import LushaiLogoDark from '../assets/images/lushai-logo-dark.jpg';
 import LushaiLogoLight from '../assets/images/lushai-logo-light.jpg';
 import LushaiLogo from '../assets/Lushai-logo.png';
 import FooterMobile from '../components/FooterMobile';
+import abc from '../data/treatments_list_v2.json';
 
 const specialArray = [
     'Certified, experienced therapists',
@@ -99,7 +100,7 @@ const HomeHero = ({ show }) => {
                         type='video/mp4'
                     />
                 </video>
-                <div className='home-hero-overlay'>
+                {/* <div className='home-hero-overlay'>
                     {show && (
                         <div className='home-hero-overlay-content'>
                             <div>
@@ -109,7 +110,7 @@ const HomeHero = ({ show }) => {
                             </div>
                         </div>
                     )}
-                </div>
+                </div> */}
             </div>
         </div>
     );
@@ -136,6 +137,14 @@ const Welcome = () => {
 };
 
 const Services = () => {
+    const [activeService, setActiveService] = useState(0);
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setActiveService((prev) => (prev + 1) % abc.length)
+    //     }, 5000);
+    // }, [activeService])
+
     return (
         <div className='home-services'>
             <h2>Our Services</h2>
@@ -144,12 +153,90 @@ const Services = () => {
                 Explicabo dignissimos eveniet accusantium earum
             </p>
             <div className='home-services-container'>
-                {services.map((service, index) => (
-                    <Service
-                        service={service}
-                        key={index}
+                <div className='home-services-list'>
+                    {abc.map((service, index) => (
+                        <Service
+                            service={service}
+                            key={index}
+                            activeService={activeService}
+                            setActiveService={setActiveService}
+                            index={index}
+                        />
+                    ))}
+                </div>
+                <div className='home-services-active'>
+                    <div className='home-services-active-details'>
+                        <div className='home-services-active-category'>
+                            {/* <img src={abc[activeService].icon} alt="" /> */}
+                            <span
+                                style={{
+                                    backgroundColor: abc[activeService].color,
+                                }}
+                            >
+                                {abc[activeService].category
+                                    .charAt(0)
+                                    .toUpperCase() +
+                                    abc[activeService].category
+                                        .split(' ')[1]
+                                        .charAt(0)
+                                        .toUpperCase()}
+                            </span>
+
+                            <h3>{abc[activeService].category}</h3>
+                        </div>
+                        <p>{abc[activeService].description}</p>
+                        <button>Details</button>
+                    </div>
+                    <img
+                        src={abc[activeService].image}
+                        alt={abc[activeService].alt}
+                        style={{
+                            backgroundImage: `linear-gradient(${abc[activeService].color}, white)`,
+                        }}
                     />
-                ))}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+const ContactHome = () => {
+    return (
+        <div className='home-contact'>
+            <div>
+                <h2>Have any questions?</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Enim culpa excepturi laboriosam maiores libero nemo hic.
+                    Quibusdam labore repudiandae in adipisci recusandae modi
+                    autem ad! Officiis placeat quos optio veniam.
+                </p>
+                <NavLink to='/contact'>Contact Us</NavLink>
+            </div>
+            <img
+                src='https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+                alt=''
+            />
+        </div>
+    );
+};
+
+const BookHome = () => {
+    return (
+        <div className='home-book'>
+            <img
+                src='https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+                alt=''
+            />
+            <div>
+                <h2>Ready to Book?</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Architecto vitae hic mollitia similique quos magnam totam
+                    eligendi sapiente modi sed debitis officia omnis quibusdam
+                    soluta rerum at, necessitatibus accusantium aspernatur!
+                </p>
+                <NavLink to='/booking'>Book Now</NavLink>
             </div>
         </div>
     );
@@ -259,7 +346,8 @@ const Home = () => {
                 {/* <Welcome /> */}
                 <div className='home-divider-2'></div>
                 <Services />
-                <Special />
+                <ContactHome />
+                <BookHome />
             </main>
             {screenType === 'mobile' ? <FooterMobile /> : <Footer />}
         </div>
