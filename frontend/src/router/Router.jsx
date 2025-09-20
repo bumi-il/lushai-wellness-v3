@@ -9,6 +9,7 @@ import NotFound from '../pages/NotFound';
 import PrivacyPolicyAndTerms from '../pages/PrivacyPolicyAndTerms';
 
 const Router = () => {
+
     return (
         <Routes>
             <Route

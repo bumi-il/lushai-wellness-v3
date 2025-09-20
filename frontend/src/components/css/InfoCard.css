@@ -1,0 +1,41 @@
+.info-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, whitesmoke, rgb(250, 240, 200));
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.info-card-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.5;
+
+    svg {
+        color: white;        
+    }
+}
+
+.info-card-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h3 {
+        /* font-size: 20px; */
+    }
+
+    p {
+        /* font-size: 15px; */
+        margin: 0;
+        color: gray;
+    }
+}

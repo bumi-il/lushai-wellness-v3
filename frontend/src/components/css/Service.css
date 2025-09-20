@@ -21,6 +21,12 @@
     border-radius: 50%;
     padding: 20px;
     margin: 10px;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
 }
 
 @media (max-width: 1024px) {

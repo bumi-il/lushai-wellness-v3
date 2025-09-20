@@ -5,7 +5,7 @@
         "description": "Short on time, but in need of peace? These 30-minute rituals offer a quick yet powerful reset — calming the body, quieting the mind, and restoring inner balance.",
         "image": "",
         "alt": "",
-        "icon": "",
+        "icon": "Star",
         "color": "red",
         "treatments": [
             {
@@ -39,7 +39,7 @@
         "description": "At the heart of Lushai lies this collection of holistic experiences, shaped by culture, rhythm, and intention. Each ritual is designed to awaken the senses, release tension, and restore inner harmony through skilled touch and aromatic oils.",
         "image": "",
         "alt": "",
-        "icon": "",
+        "icon": "Sparkles",
         "color": "yellow",
         "treatments": [
             {
@@ -86,7 +86,7 @@
         "description": "A shared moment of stillness and warmth. Let Lushai be the backdrop for your intimate escape — where healing touch meets gentle connection, and time slows down for two.",
         "image": "",
         "alt": "",
-        "icon": "",
+        "icon": "Heart",
         "color": "green",
         "treatments": [
             {
@@ -114,7 +114,7 @@
         "description": "Nourish your skin, restore your glow. These treatments combine traditional techniques with natural ingredients to refresh, purify, and rejuvenate — from head to toe.",
         "image": "",
         "alt": "",
-        "icon": "",
+        "icon": "Droplet",
         "color": "brown",
         "treatments": [
             {
@@ -171,7 +171,7 @@
         "description": "Refined beauty care for everyday elegance. A selection of essential grooming rituals designed to keep you polished, refreshed, and ready — whether for a special occasion or just because you deserve it.",
         "image": "",
         "alt": "",
-        "icon": "",
+        "icon": "Diamond",
         "color": "gray",
         "treatments": [
             {
@@ -203,7 +203,7 @@
         "description": "Thoughtfully designed combinations that bring together massage, skincare, and body treatments — perfect for those seeking a complete spa journey in one seamless session.",
         "image": "",
         "alt": "",
-        "icon": "",
+        "icon": "Gift",
         "color": "pink",
         "treatments": [
             {
@@ -231,7 +231,7 @@
         "description": "Delicate enhancements designed to complement your main treatment. These gentle additions offer that final layer of care—whether it’s a soothing head massage or a nourishing eye cream.",
         "image": "",
         "alt": "",
-        "icon": "",
+        "icon": "Flower2",
         "color": "blue",
         "treatments": [
             {

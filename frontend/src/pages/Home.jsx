@@ -14,6 +14,20 @@ import LushaiLogoLight from '../assets/images/lushai-logo-light.jpg';
 import LushaiLogo from '../assets/Lushai-logo.png';
 import FooterMobile from '../components/FooterMobile';
 import abc from '../data/treatments_list_v2.json';
+import {
+    Sparkles,
+    Heart,
+    Droplet,
+    Diamond,
+    Gift,
+    Flower2,
+    Star,
+    Icon,
+} from 'lucide-react';
+import ContactImg from '../assets/images/contact-img.jpg';
+import BookingImg from '../assets/images/booking-img.jpg';
+import InfoCard from '../components/InfoCard';
+import { Phone, Mail, MapPin, Clock, Calendar, User } from 'lucide-react';
 
 const specialArray = [
     'Certified, experienced therapists',
@@ -145,6 +159,18 @@ const Services = () => {
     //     }, 5000);
     // }, [activeService])
 
+    const Icons = {
+        Sparkles,
+        Heart,
+        Droplet,
+        Diamond,
+        Gift,
+        Flower2,
+        Star,
+    };
+
+    const Icon = Icons[abc[activeService].icon];
+
     return (
         <div className='home-services'>
             <h2>Our Services</h2>
@@ -170,22 +196,20 @@ const Services = () => {
                             {/* <img src={abc[activeService].icon} alt="" /> */}
                             <span
                                 style={{
-                                    backgroundColor: abc[activeService].color,
+                                    // styled background image
+                                    backgroundImage: `linear-gradient(to right bottom, ${abc[activeService].color}, white)`,
                                 }}
                             >
-                                {abc[activeService].category
-                                    .charAt(0)
-                                    .toUpperCase() +
-                                    abc[activeService].category
-                                        .split(' ')[1]
-                                        .charAt(0)
-                                        .toUpperCase()}
+                                <Icon
+                                    color='white'
+                                    size={30}
+                                />
                             </span>
 
                             <h3>{abc[activeService].category}</h3>
                         </div>
                         <p>{abc[activeService].description}</p>
-                        <button>Details</button>
+                        <NavLink to='/treatments'>Details</NavLink>
                     </div>
                     <img
                         src={abc[activeService].image}
@@ -200,42 +224,112 @@ const Services = () => {
     );
 };
 
+const contactInfo = [
+    {
+        Icon: Phone,
+        title: 'Phone',
+        description: '+91 1234567890',
+        color: 'green',
+    },
+    {
+        Icon: Mail,
+        title: 'Email',
+        description: 'lTt6A@example.com',
+        color: 'blue',
+    },
+    {
+        Icon: MapPin,
+        title: 'Address',
+        description: '123 Main Street, New York, NY 10001',
+        color: 'red',
+    },
+    {
+        Icon: Clock,
+        title: 'Hours',
+        description: 'Mon-Fri: 9am-5pm',
+        color: 'orange',
+    },
+];
+
 const ContactHome = () => {
     return (
         <div className='home-contact'>
-            <div>
-                <h2>Have any questions?</h2>
+            <div className='home-contact-text'>
+                {/* <h2>Have any questions?</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Enim culpa excepturi laboriosam maiores libero nemo hic.
                     Quibusdam labore repudiandae in adipisci recusandae modi
                     autem ad! Officiis placeat quos optio veniam.
-                </p>
+                </p> */}
+                <div className='home-contact-info'>
+                    {contactInfo.map((item, index) => (
+                        <InfoCard
+                            key={index}
+                            info={item}
+                        />
+                    ))}
+                </div>
                 <NavLink to='/contact'>Contact Us</NavLink>
             </div>
             <img
-                src='https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+                src={ContactImg}
                 alt=''
             />
         </div>
     );
 };
 
+const bookInfo = [
+    {
+        Icon: Calendar,
+        title: 'Date Selection',
+        description: 'Convenient calendar with real-time availability',
+        color: 'green',
+    },
+    {
+        Icon: Clock,
+        title: 'Flexible Schedule',
+        description: 'Choose a time that works for you',
+        color: 'red',
+    },
+    {
+        Icon: User,
+        title: 'Therapist Selection',
+        description: 'Choose your therapist of choice',
+        color: 'blue',
+    },
+    {
+        Icon: Gift,
+        title: 'Special Offers',
+        description: 'Get exclusive discounts and promotions',
+        color: 'orange',
+    },
+];
+
 const BookHome = () => {
     return (
         <div className='home-book'>
             <img
-                src='https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+                src={BookingImg}
                 alt=''
             />
             <div>
-                <h2>Ready to Book?</h2>
+                {/* <h2>Ready to Book?</h2>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Architecto vitae hic mollitia similique quos magnam totam
                     eligendi sapiente modi sed debitis officia omnis quibusdam
                     soluta rerum at, necessitatibus accusantium aspernatur!
-                </p>
+                </p> */}
+                <div className='home-book-info'>
+                    {bookInfo.map((item, index) => (
+                        <InfoCard
+                            key={index}
+                            info={item}
+                        />
+                    ))}
+                </div>
                 <NavLink to='/booking'>Book Now</NavLink>
             </div>
         </div>
