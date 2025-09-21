@@ -3,10 +3,10 @@
         "id": "short-escape",
         "category": "Short Escape",
         "description": "Short on time, but in need of peace? These 30-minute rituals offer a quick yet powerful reset — calming the body, quieting the mind, and restoring inner balance.",
-        "image": "",
-        "alt": "",
+        "image": "shortEscape",
+        "alt": "short-escape",
         "icon": "Star",
-        "color": "red",
+        "color": "saddlebrown",
         "treatments": [
             {
                 "name": "Relaxation Back Massage",
@@ -37,8 +37,8 @@
         "id": "lushai-rituals",
         "category": "Lushai Rituals",
         "description": "At the heart of Lushai lies this collection of holistic experiences, shaped by culture, rhythm, and intention. Each ritual is designed to awaken the senses, release tension, and restore inner harmony through skilled touch and aromatic oils.",
-        "image": "",
-        "alt": "",
+        "image": "lushaiRituals",
+        "alt": "lushai-rituals",
         "icon": "Sparkles",
         "color": "yellow",
         "treatments": [
@@ -84,10 +84,10 @@
         "id": "couples-experience",
         "category": "Couples Experience",
         "description": "A shared moment of stillness and warmth. Let Lushai be the backdrop for your intimate escape — where healing touch meets gentle connection, and time slows down for two.",
-        "image": "",
-        "alt": "",
+        "image": "couplesExperience",
+        "alt": "couples-experience",
         "icon": "Heart",
-        "color": "green",
+        "color": "pink",
         "treatments": [
             {
                 "name": "Shared Embrace",
@@ -112,8 +112,8 @@
         "id": "serene-skin",
         "category": "Serene Skin",
         "description": "Nourish your skin, restore your glow. These treatments combine traditional techniques with natural ingredients to refresh, purify, and rejuvenate — from head to toe.",
-        "image": "",
-        "alt": "",
+        "image": "serenSkin",
+        "alt": "serene-skin",
         "icon": "Droplet",
         "color": "brown",
         "treatments": [
@@ -169,8 +169,8 @@
         "id": "beauty-touch",
         "category": "Beauty Touch",
         "description": "Refined beauty care for everyday elegance. A selection of essential grooming rituals designed to keep you polished, refreshed, and ready — whether for a special occasion or just because you deserve it.",
-        "image": "",
-        "alt": "",
+        "image": "beautyTouch",
+        "alt": "beauty-touch",
         "icon": "Diamond",
         "color": "gray",
         "treatments": [
@@ -201,8 +201,8 @@
         "id": "lushai-packages",
         "category": "Lushai Packages",
         "description": "Thoughtfully designed combinations that bring together massage, skincare, and body treatments — perfect for those seeking a complete spa journey in one seamless session.",
-        "image": "",
-        "alt": "",
+        "image": "lushaiPackages",
+        "alt": "lushai-packages",
         "icon": "Gift",
         "color": "pink",
         "treatments": [
@@ -229,10 +229,10 @@
         "id": "finishing-touches",
         "category": "Finishing Touches",
         "description": "Delicate enhancements designed to complement your main treatment. These gentle additions offer that final layer of care—whether it’s a soothing head massage or a nourishing eye cream.",
-        "image": "",
-        "alt": "",
+        "image": "finishingTouches",
+        "alt": "finishing-touches",
         "icon": "Flower2",
-        "color": "blue",
+        "color": "green",
         "treatments": [
             {
                 "name": "Nails Cleansing",

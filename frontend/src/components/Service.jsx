@@ -36,6 +36,7 @@ const Service = ({ service, activeService, setActiveService, index }) => {
             <Icon
                 color={activeService === index ? 'white' : 'black'}
                 size={30}
+                
             />
         </div>
     );

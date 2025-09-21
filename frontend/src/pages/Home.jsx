@@ -28,6 +28,23 @@ import ContactImg from '../assets/images/contact-img.jpg';
 import BookingImg from '../assets/images/booking-img.jpg';
 import InfoCard from '../components/InfoCard';
 import { Phone, Mail, MapPin, Clock, Calendar, User } from 'lucide-react';
+import beautyTouch from '../assets/images/services home/beauty-touch.jpg';
+import couplesExperience from '../assets/images/services home/couples-experience.jpg';
+import finishingTouches from '../assets/images/services home/finishing-touches.jpg';
+import lushaiPackages from '../assets/images/services home/lushai-packages.jpg';
+import lushaiRituals from '../assets/images/services home/lushai-rituals.jpg';
+import serenSkin from '../assets/images/services home/seren-skin.jpg';
+import shortEscape from '../assets/images/services home/short-escape.png';
+
+const servicesImages = {
+    beautyTouch,
+    couplesExperience,
+    finishingTouches,
+    lushaiPackages,
+    lushaiRituals,
+    serenSkin,
+    shortEscape,
+};
 
 const specialArray = [
     'Certified, experienced therapists',
@@ -212,11 +229,8 @@ const Services = () => {
                         <NavLink to='/treatments'>Details</NavLink>
                     </div>
                     <img
-                        src={abc[activeService].image}
+                        src={servicesImages[abc[activeService].image]}
                         alt={abc[activeService].alt}
-                        style={{
-                            backgroundImage: `linear-gradient(${abc[activeService].color}, white)`,
-                        }}
                     />
                 </div>
             </div>
