@@ -131,7 +131,7 @@ const HomeHero = ({ show }) => {
                         type='video/mp4'
                     />
                 </video>
-                {/* <div className='home-hero-overlay'>
+                <div className='home-hero-overlay'>
                     {show && (
                         <div className='home-hero-overlay-content'>
                             <div>
@@ -141,7 +141,7 @@ const HomeHero = ({ show }) => {
                             </div>
                         </div>
                     )}
-                </div> */}
+                </div>
             </div>
         </div>
     );
