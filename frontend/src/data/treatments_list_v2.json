@@ -91,7 +91,7 @@
         "treatments": [
             {
                 "name": "Shared Embrace",
-                "description": "Side by side in a serene setting, each of you enjoys a full-body massage tailored to your preference — whether calming or invigorating. A beautiful way to unwind together and reconnect through touch.",
+                "description": "Side by side, let gentle touch ease the body and quiet the mind — a graceful pause to breathe and reconnect.",
                 "duration": "60 minutes",
                 "price": "6500",
                 "type": "base",
@@ -99,7 +99,7 @@
             },
             {
                 "name": "Deeper Connection",
-                "description": "Side by side in a serene setting, each of you enjoys a full-body massage tailored to your preference — whether calming or invigorating. A beautiful way to unwind together and reconnect through touch.",
+                "description": "A longer embrace of stillness and warmth. Each stroke lingers, inviting deeper rest and tender closeness — time itself slowing for two.",
                 "duration": "90 minutes",
                 "price": "8500",
                 "type": "base",
@@ -208,7 +208,7 @@
         "treatments": [
             {
                 "name": "Glow & Unwind",
-                "description": "Let go of tension with a calming Aroma or Balinese massage, paired with a tailored facial that brings out your natural glow. A perfect head-to-toe ritual.",
+                "description": "Melt away stress with the gentle flow of Aroma or Balinese massage, as a facial reveals your natural glow.",
                 "duration": "120 minutes",
                 "price": "4000",
                 "type": "package",
@@ -217,7 +217,7 @@
             },
             {
                 "name": "Renew & Restore",
-                "description": "Unwind deeply with your choice of Swedish or Deep Tissue massage, followed by an exfoliating scrub or nourishing wrap that leaves your skin renewed and your body completely restored.",
+                "description": "Surrender to the depth of Swedish or Deep Tissue massage, before renewal unfolds with an exfoliating scrub or nourishing wrap.",
                 "duration": "120 minutes",
                 "price": "6500",
                 "type": "package",
