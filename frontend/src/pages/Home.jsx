@@ -152,7 +152,7 @@ const Welcome = () => {
         <div className='home-welcome'>
             <div className='home-welcome-text'>
                 <h1>LUSHAI WELLNESS</h1>
-                <h2>Holistic Spa Experience In India</h2>
+                <h2>Holistic Spa Experience</h2>
                 <NavLink to='/booking'>Book Now</NavLink>
                 {/* <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -191,10 +191,6 @@ const Services = () => {
     return (
         <div className='home-services'>
             <h2>Our Services</h2>
-            <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Explicabo dignissimos eveniet accusantium earum
-            </p>
             <div className='home-services-container'>
                 <div className='home-services-list'>
                     {abc.map((service, index) => (
@@ -225,12 +221,13 @@ const Services = () => {
 
                             <h3>{abc[activeService].category}</h3>
                         </div>
-                        <p>{abc[activeService].description}</p>
+                        <p>{abc[activeService].description.replace('—', '-')}</p>
                         <NavLink to='/treatments'>Details</NavLink>
                     </div>
                     <img
                         src={servicesImages[abc[activeService].image]}
                         alt={abc[activeService].alt}
+                        loading='lazy'
                     />
                 </div>
             </div>
@@ -242,25 +239,26 @@ const contactInfo = [
     {
         Icon: Phone,
         title: 'Phone',
-        description: '+91 1234567890',
+        description: '+91 7038788903',
         color: 'green',
     },
     {
         Icon: Mail,
         title: 'Email',
-        description: 'lTt6A@example.com',
+        description: 'lushai.wellness@gmail.com',
         color: 'blue',
     },
     {
         Icon: MapPin,
         title: 'Address',
-        description: '123 Main Street, New York, NY 10001',
+        description:
+            'SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji, Prabhu wada, Calangute, Goa 403516, India',
         color: 'red',
     },
     {
         Icon: Clock,
         title: 'Hours',
-        description: 'Mon-Fri: 9am-5pm',
+        description: '10:00 AM - 10:00 PM (Sunday to Saturday)',
         color: 'orange',
     },
 ];
@@ -276,6 +274,7 @@ const ContactHome = () => {
                     Quibusdam labore repudiandae in adipisci recusandae modi
                     autem ad! Officiis placeat quos optio veniam.
                 </p> */}
+                <h2>Contact Us</h2>
                 <div className='home-contact-info'>
                     {contactInfo.map((item, index) => (
                         <InfoCard
@@ -336,6 +335,7 @@ const BookHome = () => {
                     eligendi sapiente modi sed debitis officia omnis quibusdam
                     soluta rerum at, necessitatibus accusantium aspernatur!
                 </p> */}
+                <h2>Booking Details</h2>
                 <div className='home-book-info'>
                     {bookInfo.map((item, index) => (
                         <InfoCard
@@ -439,14 +439,14 @@ const Home = () => {
                     />
                 </div>
                 <h1>LUSHAI WELLNESS</h1>
-                <h2>Holistic Spa Experience In India</h2>
+                <h2>Holistic Spa Experience</h2>
                 <NavLink to='/booking'>Book Now</NavLink>
                 <p>
                     Escape into tranquility at the heart of nature. Lushai
                     Wellness offers soul-soothing treatments, natural therapies,
-                    and a serene setting within a luxury resort in India. Let
-                    your body unwind, your mind quiet, and your spirit rise.
-                    This is more than a spa – it's a journey back to yourself
+                    and a serene setting. Let your body unwind, your mind quiet,
+                    and your spirit rise. This is more than a spa – it's a
+                    journey back to yourself
                 </p>
             </div>
             <main className='home-main'>
