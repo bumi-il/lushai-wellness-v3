@@ -48,20 +48,28 @@ const TreatmentCard = ({ treatment, category }) => {
                 <h2>{treatment.name}</h2>
                 {typesIcons[treatment.type] || <Star size={15} />}
             </div>
-            <div className='treatment-card-section-2'>
-                <div className={'treatment-card-type-tag ' + treatment.type}>
-                    <p>{treatment.type}</p>
-                </div>
-                <div className='treatment-card-category-tag'>
+            {(treatment.type !== 'base' || treatment.isPopular) && (
+                <div className='treatment-card-section-2'>
+                    {treatment.type !== 'base' && (
+                        <div
+                            className={
+                                'treatment-card-type-tag ' + treatment.type
+                            }
+                        >
+                            <p>{treatment.type}</p>
+                        </div>
+                    )}
+                    {/* <div className='treatment-card-category-tag'>
                     <p>{category}</p>
+                </div> */}
+                    {treatment.isPopular && (
+                        <div className='treatment-card-popular-tag'>
+                            <Sparkles size={15} />
+                            <span>Popular</span>
+                        </div>
+                    )}
                 </div>
-                {treatment.isPopular && (
-                    <div className='treatment-card-popular-tag'>
-                        <Sparkles size={15} />
-                        <span>Popular</span>
-                    </div>
-                )}
-            </div>
+            )}
             <div className='treatment-card-section-3'>
                 <p>
                     {treatment.description || (

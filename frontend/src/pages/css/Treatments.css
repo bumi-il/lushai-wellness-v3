@@ -34,6 +34,15 @@
 }
 
 @media (max-width: 768px) {
+    .treatments-category-header {
+        h2 {
+            margin: 0 auto;
+        }
+
+        span {
+            display: none;
+        }
+    }
     .treatments-category-list {
         grid-template-columns: 1fr;
     }

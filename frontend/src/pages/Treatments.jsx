@@ -34,7 +34,7 @@ const Treatments = () => {
                         {treatments.treatments.map((treatment, i) => (
                             <div
                                 key={i}
-                                onClick={() => setCardDetails(treatment)}
+                                // onClick={() => setCardDetails(treatment)}
                             >
                                 <TreatmentCard
                                     treatment={treatment}
