@@ -24,6 +24,7 @@ import {
     Star,
     Icon,
 } from 'lucide-react';
+import { Instagram } from 'react-feather';
 import ContactImg from '../assets/images/contact-img.jpg';
 import BookingImg from '../assets/images/booking-img.jpg';
 import InfoCard from '../components/InfoCard';
@@ -221,7 +222,9 @@ const Services = () => {
 
                             <h3>{abc[activeService].category}</h3>
                         </div>
-                        <p>{abc[activeService].description.replace('—', ',')}</p>
+                        <p>
+                            {abc[activeService].description.replace('—', ',')}
+                        </p>
                         <NavLink to='/treatments'>Details</NavLink>
                     </div>
                     <img
@@ -240,20 +243,30 @@ const contactInfo = [
         Icon: Phone,
         title: 'Phone',
         description: '+91 7038788903',
+        link: 'tel:+917038788903',
         color: 'green',
     },
     {
         Icon: Mail,
         title: 'Email',
         description: 'lushai.wellness@gmail.com',
+        link: 'mailto:lushai.wellness@gmail.com',
         color: 'blue',
+    },
+    {
+        Icon: Instagram,
+        title: 'Instagram',
+        description: '@lushai.wellness',
+        link: 'https://www.instagram.com/lushai.wellness/',
+        color: 'red',
     },
     {
         Icon: MapPin,
         title: 'Address',
         description:
             'SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji, Prabhu wada, Calangute, Goa 403516, India',
-        color: 'red',
+        link: 'https://maps.app.goo.gl/bc1acaVKiYJumniM6',
+        color: 'black',
     },
     {
         Icon: Clock,
