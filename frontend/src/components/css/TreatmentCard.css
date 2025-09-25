@@ -108,7 +108,7 @@
     border: 2px solid rgb(45, 70, 50);
     border-radius: 10px;
     width: 50%;
-    padding: 10px 0;
+    padding: 10px;
     justify-content: center;
     background-color: rgb(90, 140, 100);
     color: white;
@@ -118,12 +118,11 @@
 .treatment-card-price {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
     border: 2px solid rgb(100, 85, 65);
     border-radius: 10px;
     width: 50%;
-    padding: 10px 0;
-    justify-content: center;
+    padding: 10px;
     background-color: rgb(200, 170, 130);
     color: white;
     font-weight: bold;
