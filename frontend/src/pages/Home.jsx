@@ -221,7 +221,7 @@ const Services = () => {
 
                             <h3>{abc[activeService].category}</h3>
                         </div>
-                        <p>{abc[activeService].description.replace('—', '-')}</p>
+                        <p>{abc[activeService].description.replace('—', ',')}</p>
                         <NavLink to='/treatments'>Details</NavLink>
                     </div>
                     <img
