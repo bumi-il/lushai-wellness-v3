@@ -257,7 +257,7 @@ const contactInfo = [
         Icon: Instagram,
         title: 'Instagram',
         description: '@lushai.wellness',
-        link: 'https://www.instagram.com/lushai.wellness/',
+        link: 'https://www.instagram.com/lushai_wellness/',
         color: 'red',
     },
     {
