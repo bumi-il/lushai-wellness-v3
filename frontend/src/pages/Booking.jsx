@@ -56,7 +56,7 @@ const Booking = () => {
                         </li>
                     </ul>
                     <a
-                        href='https://www.welns.io/product/booking/WFRCHN469741/Lushaiwellness339361'
+                        href='https://www.welns.io/product/booking/WFRCHN469741/lushaiwellness'
                         target='_blank'
                         rel='noopener noreferrer'
                         className='continue-booking'
