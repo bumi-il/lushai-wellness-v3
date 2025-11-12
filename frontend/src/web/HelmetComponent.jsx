@@ -7,24 +7,24 @@ const DEFAULT_OG = `${SITE_ORIGIN}/assets/og-default.jpg`;
 
 const pages = {
     '': {
-        title: 'Lushai Wellness — Holistic Spa in Aizawl, Mizoram',
+        title: 'Lushai Wellness — Holistic Spa in Calangute, Goa',
         description:
-            'Holistic spa treatments in Aizawl, Mizoram. Massage, facial & body therapies. Breathe, relax, and reconnect at Lushai Wellness.',
+            'Holistic spa treatments in Calangute, Goa. Massage, facial & body therapies. Breathe, relax, and reconnect at Lushai Wellness.',
         og: {
-            title: 'Lushai Wellness | Holistic Spa in Aizawl, Mizoram',
+            title: 'Lushai Wellness | Holistic Spa in Calangute, Goa',
             description:
-                'Discover mindful massage, facials and body therapies in the hills of Mizoram.',
+                'Discover mindful massage, facials and body therapies in the hills of Goa.',
             image: `${SITE_ORIGIN}/assets/og-home.jpg`,
         },
     },
     treatments: {
         title: 'Treatments — Massage, Facial & Body Therapies | Lushai Wellness',
         description:
-            'Explore Swedish & deep tissue massage, facials and body therapies in Aizawl. Find durations, benefits and pricing.',
+            'Explore Swedish & deep tissue massage, facials and body therapies in Calangute. Find durations, benefits and pricing.',
         og: {
             title: 'Our Treatments | Lushai Wellness',
             description:
-                'Rejuvenate with tailored massage, facial and body therapies in Aizawl.',
+                'Rejuvenate with tailored massage, facial and body therapies in Calangute.',
             image: `${SITE_ORIGIN}/assets/og-treatments.jpg`,
         },
     },
@@ -50,13 +50,13 @@ const LOCAL_BUSINESS_SCHEMA = {
     url: 'https://lushaiwellness.com/',
     image: 'https://lushaiwellness.com/assets/og-home.jpg',
     description:
-        'Holistic spa treatments in Aizawl, Mizoram: massage, facial & body therapies.',
+        'Holistic spa treatments in Calangute, Goa: massage, facial & body therapies.',
     telephone: '+91 7038788903',
     address: {
         '@type': 'PostalAddress',
         streetAddress: 'Lalhmingthanga Building, Zarkawt',
-        addressLocality: 'Aizawl',
-        addressRegion: 'Mizoram',
+        addressLocality: 'Calangute',
+        addressRegion: 'Goa',
         postalCode: '796007',
         addressCountry: 'IN',
     },
@@ -90,13 +90,13 @@ const HelmetComponent = () => {
     const location = useLocation();
 
     const meta = pages[path] || {
-        title: 'Lushai Wellness — Holistic Spa in Aizawl, Mizoram',
+        title: 'Lushai Wellness — Holistic Spa in Calangute, Goa',
         description:
-            'A boutique holistic spa in Aizawl offering massage, facial and body therapies.',
+            'A boutique holistic spa in Calangute offering massage, facial and body therapies.',
         og: {
             title: 'Lushai Wellness',
             description:
-                'Boutique holistic spa treatments in the hills of Mizoram.',
+                'Boutique holistic spa treatments in the hills of Goa.',
             image: DEFAULT_OG,
         },
         robots: 'index, follow',
