@@ -1,51 +1,106 @@
-.treatments {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    margin: 5%;
+.treatments-page {
+    --treatments-ink: #1d3c32;
+    --treatments-muted: #606b61;
+    --treatments-border: #dce1d6;
+    --treatments-background: #f8f6f0;
+    --treatments-nav-height: 64px;
+    background: var(--treatments-background);
+    color: var(--treatments-ink);
+    line-height: 1.6;
+    padding-bottom: 60px;
 }
+.treatments-page *, .treatments-page *::before, .treatments-page *::after { box-sizing: border-box; }
+.treatments-page a { color: inherit; }
+.treatments-page a:focus-visible { outline: 3px solid #ac8244; outline-offset: 5px; border-radius: 2px; }
+.treatments-container { width: calc(100% - 64px); max-width: 1160px; margin-left: auto; margin-right: auto; }
+.treatments-intro { padding: 28px 0 44px; text-align: center; }
+.treatments-breadcrumb { display: flex; gap: 12px; align-items: center; margin-bottom: 32px; text-align: left; font-size: 13px; color: var(--treatments-muted); }
+.treatments-breadcrumb a { padding: 8px 0; text-decoration: underline; text-underline-offset: 4px; }
+.treatments-eyebrow { font-size: 11px; font-weight: 600; line-height: 1.6; letter-spacing: 0.15em; text-transform: uppercase; }
+.treatments-intro > .treatments-eyebrow { color: #72603d; }
+.treatments-intro h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(42px, 5vw, 64px); font-weight: 400; letter-spacing: -0.035em; line-height: 1.15; margin: 12px 0 20px; }
+.treatments-intro h1 em { font-weight: 400; }
+.treatments-intro-copy { font-size: 16px; color: var(--treatments-muted); }
+.treatments-menu-count { display: flex; justify-content: center; align-items: center; gap: 12px; font-size: 12px; color: #72603d; margin-top: 24px; }
+.treatments-menu-count > span { color: #8e997d; }
+.treatments-category-nav { position: sticky; top: var(--header-height, 80px); height: var(--treatments-nav-height); z-index: 30; background: var(--treatments-background); border-top: 1px solid var(--treatments-border); border-bottom: 1px solid var(--treatments-border); }
+.treatments-category-links { position: relative; display: flex; gap: 30px; height: 100%; overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: thin; scrollbar-color: #b5bfae transparent; }
+.treatments-category-links a { flex-shrink: 0; display: flex; align-items: center; min-height: 48px; border-bottom: 2px solid transparent; padding: 5px 2px 3px; text-decoration: none; color: var(--treatments-muted); white-space: nowrap; font-size: 13px; font-weight: 500; }
+.treatments-category-links a:hover, .treatments-category-links a[aria-current='location'] { color: var(--treatments-ink); border-bottom-color: var(--treatments-ink); }
+.treatments-category-links a:focus-visible { outline-offset: -5px; }
+.treatments-collections { padding-top: 60px; }
+.treatments-collection { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 72px; padding: 0 0 64px; scroll-margin-top: calc(var(--header-height, 80px) + var(--treatments-nav-height) + 24px); }
+.treatments-collection + .treatments-collection { padding-top: 28px; }
+.treatments-collection-intro .treatments-eyebrow { color: #72603d; margin-bottom: 14px; }
+.treatments-collection-intro h2 { font-family: Georgia, 'Times New Roman', serif; font-size: 34px; line-height: 1.15; font-weight: 400; letter-spacing: -0.025em; margin-bottom: 18px; }
+.treatments-collection-intro > p:last-of-type { color: var(--treatments-muted); font-size: 14px; line-height: 1.8; }
+.treatments-collection-rule { display: block; width: 40px; height: 1px; background: #ac946c; margin-top: 26px; }
+.treatments-menu-list { min-width: 0; border-top: 1px solid #b9c5b3; }
+.treatments-page .treatment-row { display: grid; grid-template-columns: minmax(0, 1fr) 170px; gap: 32px; padding: 28px 0; border-bottom: 1px solid var(--treatments-border); }
+.treatments-page .treatment-row-copy { min-width: 0; }
+.treatments-page .treatment-row-title { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-bottom: 10px; }
+.treatments-page .treatment-row h3 { font-size: 18px; font-weight: 500; line-height: 1.4; letter-spacing: -0.015em; }
+.treatments-page .treatment-label { display: inline-flex; align-items: center; padding: 2px 7px; background: #e9eee3; border: 1px solid #d0dbc7; border-radius: 3px; color: #3f5840; font-size: 10px; line-height: 1.6; letter-spacing: 0.035em; }
+.treatments-page .treatment-description { color: var(--treatments-muted); font-size: 14px; line-height: 1.8; }
+.treatments-page .treatment-note { color: #4e5f50; font-size: 12px; line-height: 1.7; margin-top: 12px; }
+.treatments-page .treatment-note > span { font-weight: 600; }
+.treatments-page .treatment-row-details { min-width: 0; align-self: center; }
+.treatments-page .treatment-options { margin: 0; }
+.treatments-page .treatment-option { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 3px 0; font-size: 14px; }
+.treatments-page .treatment-option dt { color: var(--treatments-muted); flex-shrink: 0; }
+.treatments-page .treatment-option dd { margin: 0; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.treatments-page .treatment-book-link { display: flex; align-items: center; justify-content: flex-end; gap: 6px; margin-top: 10px; min-height: 44px; font-size: 12px; text-decoration: underline; text-underline-offset: 4px; }
+.treatments-page .treatment-book-link svg { flex-shrink: 0; }
+.treatments-page .treatment-book-link:hover { color: #526a45; }
+.treatments-page .treatment-addon-note { font-size: 11px; color: var(--treatments-muted); text-align: right; margin-top: 10px; }
+.treatments-booking { background: #1d3c32; color: #fcfaf3; border-radius: 10px; padding: 40px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.treatments-booking .treatments-eyebrow { color: #d5c5a5; margin-bottom: 12px; }
+.treatments-booking h2 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(28px, 3vw, 36px); letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 14px; }
+.treatments-booking p:last-child { color: #dce4db; font-size: 14px; max-width: 450px; }
+.treatments-booking-actions { display: flex; flex-direction: column; gap: 14px; flex-shrink: 0; }
+.treatments-page .treatments-primary-link { display: inline-flex; align-items: center; justify-content: center; gap: 20px; min-height: 48px; background: #f5f1e7; color: #1d3c32; border: 1px solid #f5f1e7; border-radius: 5px; padding: 12px 22px; font-size: 14px; text-decoration: none; font-weight: 500; }
+.treatments-page .treatments-primary-link:hover { background: #e3e8d9; }
+.treatments-page .treatments-help-link { display: flex; gap: 8px; align-items: center; justify-content: center; min-height: 44px; font-size: 12px; color: #dce4db; text-decoration: underline; text-underline-offset: 4px; }
+.treatments-currency-note { text-align: center; color: var(--treatments-muted); font-size: 12px; margin-top: 24px; }
 
-.treatments-category-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 20px;
-
-    h2 {
-        font-size: 35px;
-    }
-
-    span {
-        flex-grow: 1;
-        height: 2px;
-        background-color: var(--primary-text-color);
-    }
+@media (max-width: 1050px) {
+    .treatments-category-links { gap: 24px; }
+    .treatments-collection { grid-template-columns: 200px minmax(0, 1fr); gap: 40px; }
+    .treatments-page .treatment-row { grid-template-columns: minmax(0, 1fr) 160px; gap: 24px; }
 }
-
-.treatments-category-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 900px) {
+    .treatments-collection { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-bottom: 48px; }
+    .treatments-collection-intro > p:last-of-type { max-width: 65ch; }
+    .treatments-collection-rule { display: none; }
+    .treatments-collection-intro h2 { margin-bottom: 12px; }
+    .treatments-booking { padding: 32px; flex-direction: column; align-items: flex-start; gap: 24px; }
 }
-
-@media (max-width: 1024px) {
-    .treatments-category-list {
-        grid-template-columns: repeat(2, 1fr);
-    }
+@media (max-width: 600px) {
+    .treatments-page { padding-bottom: 40px; }
+    .treatments-container { width: calc(100% - 40px); }
+    .treatments-intro { padding: 20px 0 30px; }
+    .treatments-breadcrumb { margin-bottom: 24px; }
+    .treatments-intro-copy { font-size: 15px; }
+    .treatments-desktop-break { display: none; }
+    .treatments-menu-count { margin-top: 20px; }
+    .treatments-category-links { width: 100%; padding: 0 20px; gap: 24px; scroll-padding-inline: 20px; }
+    .treatments-category-links a { font-size: 12px; }
+    .treatments-collections { padding-top: 36px; }
+    .treatments-collection { gap: 22px; padding-bottom: 36px; }
+    .treatments-collection + .treatments-collection { padding-top: 16px; }
+    .treatments-collection-intro h2 { font-size: 30px; }
+    .treatments-page .treatment-row { grid-template-columns: minmax(0, 1fr); gap: 18px; padding: 24px 0; }
+    .treatments-page .treatment-row-details { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 20px; }
+    .treatments-page .treatment-options { width: 170px; max-width: 100%; }
+    .treatments-page .treatment-book-link { margin-top: 0; justify-content: flex-start; }
+    .treatments-page .treatment-addon-note { text-align: left; }
+    .treatments-booking { padding: 28px 24px; }
+    .treatments-booking-actions { width: 100%; }
 }
-
-@media (max-width: 768px) {
-    .treatments-category-header {
-        h2 {
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        span {
-            display: none;
-        }
-    }
-    .treatments-category-list {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 360px) {
+    .treatments-container { width: calc(100% - 32px); }
+    .treatments-category-links { width: 100%; padding-left: 16px; padding-right: 16px; }
 }
-
+@media (prefers-reduced-motion: reduce) {
+    .treatments-page *, .treatments-page *::before, .treatments-page *::after { scroll-behavior: auto !important; transition: none !important; }
+}
