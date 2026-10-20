@@ -10,13 +10,13 @@ import FooterMobile from '../components/FooterMobile';
 const Layout = () => {
     const { screenType } = useLushaiContext();
     const { pathname } = useLocation();
-    const isContactPage = pathname.split('/')[1] === 'contact';
+    const hasOwnIntroduction = ['contact', 'treatments'].includes(pathname.split('/')[1]);
 
     return (
         <div className='layout'>
             {screenType === 'mobile' ? <HeaderMobile /> : <Header />}
             <main>
-                {!isContactPage && <Hero />}
+                {!hasOwnIntroduction && <Hero />}
                 <Outlet />
             </main>
             {screenType === 'mobile' ? <FooterMobile /> : <Footer />}
@@ -25,4 +25,3 @@ const Layout = () => {
 };
 
 export default Layout;
-

@@ -20,7 +20,7 @@ const Context = ({ children }) => {
     useEffect(() => {
         setPath(location.pathname.split('/')[1]);
         window.scrollTo(0, 0);
-    }, [location]);   
+    }, [location.pathname]);
 
     useEffect(() => {
         const handleResize = () => {

@@ -1,9 +1,9 @@
-name: Contact preview on GitHub Pages
+name: Wellness preview on GitHub Pages
 
 on:
   push:
     branches:
-      - redesign/contact-page
+      - redesign/treatments-page
 
 permissions:
   contents: read
@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   build:
-    if: github.ref == 'refs/heads/redesign/contact-page'
+    if: github.ref == 'refs/heads/redesign/treatments-page'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     defaults:
@@ -32,7 +32,7 @@ jobs:
       - name: Install dependencies
         run: npm install --no-audit --no-fund
 
-      - name: Test contact submissions
+      - name: Test contact submissions and treatment options
         run: npm test
 
       - name: Build for the repository URL
@@ -43,6 +43,23 @@ jobs:
       - name: Prepare direct links for static hosting
         run: node scripts/prepare-pages-preview.mjs
 
+      - name: Install Chromium for responsive checks
+        run: npx playwright install --with-deps chromium
+
+      - name: Verify treatments in desktop and mobile browsers
+        env:
+          REPOSITORY_NAME: ${{ github.event.repository.name }}
+        run: npm run test:browser
+
+      - name: Upload browser screenshots and checks
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: treatments-browser-review
+          path: frontend/test-results
+          if-no-files-found: ignore
+          retention-days: 7
+
       - name: Upload the built site
         uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5
         with:
@@ -50,7 +67,7 @@ jobs:
 
   deploy:
     needs: build
-    if: github.ref == 'refs/heads/redesign/contact-page'
+    if: github.ref == 'refs/heads/redesign/treatments-page'
     runs-on: ubuntu-latest
     timeout-minutes: 10
     permissions:
