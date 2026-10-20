@@ -1,204 +1,186 @@
-import { useState } from 'react';
-import './css/Contact.css';
+import { useRef, useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import { ArrowRight, ArrowUpRight, CheckCircle2, Clock, Loader2, Mail, MapPin, Phone } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import '../utils/leafletIconFix';
-import { FaWhatsapp } from 'react-icons/fa';
-import { CiMail, CiLocationOn, CiClock1, CiPhone } from 'react-icons/ci';
+import { sendContactMessage } from '../utils/contactSubmission';
+import './css/Contact.css';
+
+const ADDRESS = 'SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji, Prabhu wada, Calangute, Goa 403516, India';
+const DIRECTIONS = 'https://maps.app.goo.gl/bc1acaVKiYJumniM6';
+const POSITION = [15.550952, 73.766432];
+const EMPTY_FORM = { firstName: '', lastName: '', email: '', subject: '', message: '' };
+
+const contactOptions = [
+    { Icon: Phone, label: 'Call us', detail: '+91 7038788903', href: 'tel:+917038788903' },
+    { Icon: FaWhatsapp, label: 'Chat on WhatsApp', detail: '+91 7038788903', href: 'https://wa.me/917038788903' },
+    { Icon: Mail, label: 'Email us', detail: 'lushai.wellness@gmail.com', href: 'mailto:lushai.wellness@gmail.com' },
+];
 
 const Form = () => {
-    const [form, setForm] = useState({
-        firstName: '',
-        lastName: '',
-        email: '',
-        subject: '',
-        message: '',
-    });
-    const [submitted, setSubmitted] = useState(false);
+    const [form, setForm] = useState(EMPTY_FORM);
+    const [status, setStatus] = useState('idle');
+    const sending = useRef(false);
+    const isSending = status === 'sending';
 
-    const handleChange = (e) => {
-        setForm({
-            ...form,
-            [e.target.name]: e.target.value,
-        });
+    const handleChange = (event) => {
+        const { name, value } = event.target;
+        event.target.setCustomValidity('');
+        setForm((previous) => ({ ...previous, [name]: value }));
+        if (status !== 'idle') setStatus('idle');
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(form);
-        setSubmitted(true);
-        fetch('https://hook.eu2.make.com/621j5jmsirf9uvp310cqqsqukmwqbn5h', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(form),
-        })
-            .then((res) => {
-                if (res.status !== 200) {
-                    throw new Error('Email failed to send');
-                }
-                setForm({
-                    firstName: '',
-                    lastName: '',
-                    email: '',
-                    subject: '',
-                    message: '',
-                });
-                setSubmitted(false);
-            })
-            .catch((err) => console.log(err));
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        if (sending.current) return;
+        const values = Object.fromEntries(
+            Object.entries(form).map(([name, value]) => [name, value.trim()])
+        );
+        for (const name of ['firstName', 'lastName', 'email', 'message']) {
+            if (!values[name]) {
+                const field = event.currentTarget.elements.namedItem(name);
+                field.setCustomValidity('Please complete this field.');
+                field.reportValidity();
+                return;
+            }
+        }
+        sending.current = true;
+        setStatus('sending');
+        try {
+            await sendContactMessage(values);
+            setForm(EMPTY_FORM);
+            setStatus('success');
+        } catch {
+            setStatus('error');
+        } finally {
+            sending.current = false;
+        }
     };
 
     return (
-        <div className='contact-form-container'>
-            <div className='contact-form-text'>
-                <h1>Get in Touch</h1>
-                <p>
-                    Have a question or just want to say hi? We'd love to hear
-                    from you.
-                </p>
-                <p>Fill up the form and our Team will get back to you soon.</p>
-            </div>
-            <form
-                onSubmit={handleSubmit}
-                className='contact-form'
-            >
-                <div>
-                    <input
-                        placeholder='First Name'
-                        name='firstName'
-                        type='text'
-                        required
-                        onChange={handleChange}
-                        value={form.firstName}
-                    />
-                    <input
-                        placeholder='Last Name'
-                        name='lastName'
-                        type='text'
-                        required
-                        onChange={handleChange}
-                        value={form.lastName}
-                    />
+        <section className='contact-form-card' aria-labelledby='contact-form-heading'>
+            <p className='contact-eyebrow'>A little conversation, a little clarity</p>
+            <h2 id='contact-form-heading'>Send us a message</h2>
+            <p className='contact-form-intro'>Ask about a treatment, plan your visit, or simply say hello.</p>
+            <form className='contact-form' onSubmit={handleSubmit} aria-busy={isSending}>
+                <p className='contact-required-note'>Fields marked with * are required.</p>
+                <fieldset disabled={isSending}>
+                    <legend className='contact-sr-only'>Your contact details and message</legend>
+                    <div className='contact-form-row'>
+                        <div className='contact-field'>
+                            <label htmlFor='contact-first-name'>First name <span aria-hidden='true'>*</span></label>
+                            <input id='contact-first-name' name='firstName' autoComplete='given-name' required value={form.firstName} onChange={handleChange} />
+                        </div>
+                        <div className='contact-field'>
+                            <label htmlFor='contact-last-name'>Last name <span aria-hidden='true'>*</span></label>
+                            <input id='contact-last-name' name='lastName' autoComplete='family-name' required value={form.lastName} onChange={handleChange} />
+                        </div>
+                    </div>
+                    <div className='contact-field'>
+                        <label htmlFor='contact-email'>Email address <span aria-hidden='true'>*</span></label>
+                        <input id='contact-email' name='email' type='email' autoComplete='email' required value={form.email} onChange={handleChange} />
+                    </div>
+                    <div className='contact-field'>
+                        <label htmlFor='contact-subject'>Subject <span className='contact-optional'>(optional)</span></label>
+                        <input id='contact-subject' name='subject' value={form.subject} onChange={handleChange} placeholder='How can we help?' />
+                    </div>
+                    <div className='contact-field'>
+                        <label htmlFor='contact-message'>Your message <span aria-hidden='true'>*</span></label>
+                        <textarea id='contact-message' name='message' rows={5} required value={form.message} onChange={handleChange} placeholder='Tell us a little about what you have in mind…' />
+                    </div>
+                </fieldset>
+                <div className='contact-form-bottom'>
+                    <p>For appointments, please use our <NavLink to='/booking'>booking page</NavLink>.</p>
+                    <button className='contact-button contact-submit' type='submit' disabled={isSending}>
+                        {isSending ? 'Sending…' : 'Send message'}
+                        {isSending ? <Loader2 className='contact-spinner' size={18} aria-hidden='true' /> : <ArrowRight size={18} aria-hidden='true' />}
+                    </button>
                 </div>
-                <div>
-                    <input
-                        placeholder='Email'
-                        name='email'
-                        type='email'
-                        required
-                        onChange={handleChange}
-                        value={form.email}
-                    />
-                    <input
-                        placeholder='Subject'
-                        name='subject'
-                        type='text'
-                        onChange={handleChange}
-                        value={form.subject}
-                    />
+                <div className='contact-form-status' role='status' aria-live='polite' aria-atomic='true'>
+                    {status === 'success' && (
+                        <p className='contact-success'><CheckCircle2 size={20} aria-hidden='true' />Thank you. Your message has been sent. We’ll be in touch.</p>
+                    )}
                 </div>
-                <textarea
-                    placeholder='Message'
-                    name='message'
-                    type='text'
-                    required
-                    onChange={handleChange}
-                    value={form.message}
-                />
-                <button
-                    type='submit'
-                    onSubmit={handleSubmit}
-                    disabled={submitted}
-                >
-                    {submitted ? 'Sending...' : 'Send Message'}
-                </button>
+                {status === 'error' && (
+                    <p className='contact-error' role='alert'>
+                        We couldn’t send your message. Your details are still here. Please try again, or <a href='tel:+917038788903'>call us</a> or <a href='https://wa.me/917038788903'>chat on WhatsApp</a>.
+                    </p>
+                )}
             </form>
-        </div>
+        </section>
     );
 };
 
-const Info = () => {
-    return (
-        <div className='contact-info'>
-            <div>
-                <CiPhone />
-                <a
-                    href='tel:+917038788903'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
-                    +91 7038788903
-                </a>
-            </div>
-            <div>
-                <CiMail />
-                <a
-                    href='mailto:lushai.wellness@gmail.com'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                >
-                    lushai.wellness@gmail.com
-                </a>
-            </div>
-            <div>
-                <FaWhatsapp size={22}/>
-                <a href='https://wa.me/917038788903'>+91 7038788903</a>
-            </div>
-            <div>
-                <CiLocationOn />
-                <a href='https://maps.app.goo.gl/bc1acaVKiYJumniM6' target='_blank'>
-                    SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji, Prabhu
-                    wada, Calangute, Goa 403516, India
-                </a>
-            </div>
-            <div>
-                <CiClock1 />
-                <p>
-                    10:00 AM - 10:00 PM <br />
-                    (Sunday to Saturday)
-                </p>
+const Info = () => (
+    <aside className='contact-details' aria-labelledby='contact-details-heading'>
+        <div className='contact-details-main'>
+            <p className='contact-eyebrow'>Always a warm welcome</p>
+            <h2 id='contact-details-heading'>Let’s talk wellness.</h2>
+            <p className='contact-details-intro'>A question about your visit? We’re here to help you find your moment of calm.</p>
+            <ul className='contact-channels'>
+                {contactOptions.map(({ Icon, label, detail, href }) => (
+                    <li key={label}>
+                        <a href={href}>
+                            <span className='contact-channel-icon'><Icon size={21} aria-hidden='true' /></span>
+                            <span className='contact-channel-copy'><strong>{label}</strong><span>{detail}</span></span>
+                            <ArrowUpRight size={18} aria-hidden='true' />
+                        </a>
+                    </li>
+                ))}
+            </ul>
+            <div className='contact-hours'>
+                <Clock size={20} aria-hidden='true' />
+                <div><h3>A little time for yourself</h3><p>Open every day · 10:00 AM – 10:00 PM</p></div>
             </div>
         </div>
-    );
-};
+        <div className='contact-booking-note'>
+            <p>Ready for your next pause?</p>
+            <NavLink to='/booking'>Book your spa experience <ArrowUpRight size={18} aria-hidden='true' /></NavLink>
+        </div>
+    </aside>
+);
 
-const Map = () => {
-    return (
-        <div className='contact-map'>
-            <MapContainer
-                center={[15.550952, 73.766432]}
-                zoom={16}
-                style={{ height: '400px', width: '100%' }}
-            >
-                <TileLayer
-                    url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-                    attribution='&copy; OpenStreetMap contributors'
-                />
-                <Marker position={[15.550952, 73.766432]}>
-                    <Popup maxWidth={200}>
-                        <p>
-                            SY.NA, 363/6, Porba Vaddo, inside effotel by sayaji,
-                            Prabhu wada, Calangute, Goa 403516, India
-                        </p>
-                    </Popup>
+const Map = () => (
+    <section className='contact-visit' aria-labelledby='contact-visit-heading'>
+        <div className='contact-visit-copy'>
+            <p className='contact-eyebrow'>Find your stillness</p>
+            <h2 id='contact-visit-heading'>Visit us in Calangute.</h2>
+            <p className='contact-visit-intro'>Your time to unwind is closer than you think.</p>
+            <div className='contact-address'>
+                <MapPin size={22} aria-hidden='true' />
+                <address><a href={DIRECTIONS} target='_blank' rel='noopener noreferrer'>{ADDRESS}</a></address>
+            </div>
+            <a className='contact-button contact-directions' href={DIRECTIONS} target='_blank' rel='noopener noreferrer'>
+                Get directions <ArrowUpRight size={18} aria-hidden='true' /><span className='contact-sr-only'> (opens in a new tab)</span>
+            </a>
+        </div>
+        <div className='contact-map' role='region' aria-label='Map showing Lushai Wellness in Calangute, Goa'>
+            <MapContainer center={POSITION} zoom={16} scrollWheelZoom={false}>
+                <TileLayer url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png' attribution='&copy; OpenStreetMap contributors' />
+                <Marker position={POSITION} alt='Lushai Wellness location'>
+                    <Popup maxWidth={240}><strong>Lushai Wellness</strong><p>{ADDRESS}</p><a href={DIRECTIONS} target='_blank' rel='noopener noreferrer'>Get directions</a></Popup>
                 </Marker>
             </MapContainer>
         </div>
-    );
-};
+    </section>
+);
 
-const Contact = () => {
-    return (
-        <div className='contact'>
-            <Form />
-            <div className='contact-info-container'>
-                <Map />
-                <Info />
-            </div>
+const Contact = () => (
+    <div className='contact'>
+        <div className='contact-container'>
+            <header className='contact-intro'>
+                <nav className='contact-breadcrumb' aria-label='Breadcrumb'><NavLink to='/'>Home</NavLink><span aria-hidden='true'>/</span><span aria-current='page'>Contact</span></nav>
+                <p className='contact-eyebrow'>Lushai Wellness · Calangute, Goa</p>
+                <h1>A moment to connect.</h1>
+                <p>Every wellness journey begins with a conversation.<br className='contact-desktop-break' /> We’d love to hear from you.</p>
+            </header>
+            <div className='contact-main'><Info /><Form /></div>
+            <Map />
         </div>
-    );
-};
+    </div>
+);
 
 export default Contact;
+

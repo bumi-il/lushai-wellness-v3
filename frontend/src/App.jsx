@@ -6,7 +6,7 @@ import HelmetComponent from './web/HelmetComponent';
 
 const App = () => {
     return (
-            <BrowserRouter>
+            <BrowserRouter basename={import.meta.env.BASE_URL}>
                 <Context>
                     <HelmetComponent />
                     <div className='App'>
